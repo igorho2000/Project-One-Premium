@@ -6,9 +6,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo}/>
+        <img src={logo} className="App-logo" />
         <p>
-          projectonepremium.com is under maintaince. Please come back later.
+          projectonepremium.com is under maintenance. Please come back later.
         </p>
       </header>
     </div>

@@ -1,6 +1,7 @@
 import '../App.css';
 import React from "react";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {TransitionContext} from "../context";
 
 export default function Landing() {
     return (
@@ -15,7 +16,12 @@ export default function Landing() {
             <img className='ho-logo' src="logo-main.svg" />
         </div>
         <div className='ho-nav'>
-            <Link to="/navigation/" className='ho-tonavigation'>Go Straight to Portfolio</Link>
+            <TransitionContext>
+            {({toggleTransition}) => (
+                <Link to="/navigation/" className='ho-tonavigation' onClick={toggleTransition}>Go Straight to Portfolio</Link>
+            )}
+            </TransitionContext>
+            
         </div>
     </header>
     );

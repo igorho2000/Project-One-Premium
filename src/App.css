@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+body {
+    /* font-family: 'Josefin Sans', sans-serif; */
+    font-family: 'Nunito Sans', sans-serif;
+    background-image: radial-gradient(circle at 75% 50%, rgb(213, 244, 255) 0%, rgb(153, 228, 255) 55%, rgb(91, 212, 255) 100%);
+    margin: 0;
+    overflow-y: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, p {
+    margin: 0;
+    font-weight: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 5s linear;
-  }
+a:link, a:visited {
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Home */
+.ho-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-top: 25vh;
+}
+.ho-description {
+    color: rgb(248, 248, 248);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    margin-right: 5%;
+}
+.ho-description__hi {
+    /* color: rgb(0, 138, 169); Alternative color */
+    color: white;
+    font-size: 5rem;
+    text-shadow: gray 1.5px 1.5px 5px;
+    font-weight: 700;
+}
+.ho-description__igor {
+    font-size: 2rem;
+    /* margin-top: -1rem; */
+}
+.ho-description__job {
+    font-size: 1rem;
+    font-style: italic;
+}
+.ho-logo {
+    height: 180px;
+    margin-left: 5%;
+}
+.ho-nav {
+    display: flex;
+    justify-content: center;
+}
+.ho-tonavigation {
+    margin: 5rem auto;
+    color: rgb(0, 138, 169);
+    text-shadow: transparent 1.5px 1.5px 5px;
+    transition: text-shadow ease-in-out 0.2s;
+}
+.ho-tonavigation:hover, .ho-tonavigation:active {
+    text-shadow: gray 1px 1px 2px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Navigation */
+.na-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.na-illustration {
+    position: relative;
+}
+.na-illustration__main {
+    height: 95vh;
+}
+.na-illustration--absolute {
+    position: absolute;
+}
+.na-illustration__about {
+    left: 6%;
+    top: 28%;
+    width: 12.5%;
+}
+.na-illustration__portfolio {
+    left: 20.5%;
+    top: 17%;
+    width: 12.5%;
+}
+.na-illustration__blog {
+    left: 35%;
+    top: 21%;
+    width: 12.5%;
+}
+.na-illustration__home {
+    left: 67.7%;
+    top: 42.3%;
+    width: 15%;
+}
+.na-illustration__roadruler {
+    left: 71%;
+    top: 33%;
+    width: 8.48%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Adjustments for portrait mode */
+
+@media (orientation: portrait) {
+    body {
+        /* Too tedious to implement gradient in mobile, replace with static color */
+        background-image: none;
+        background-color: rgb(140, 223, 253);
+    }
+    /* Home */
+    .ho-cont {
+        flex-direction: column-reverse;
+        margin-top: 20vh;
+    }
+    .ho-description {
+        margin-right: 0;
+        margin-top: 6vh;
+    }
+    .ho-logo {
+        margin-left: 0;
+        height: 70px;
+    }
+
+    /* Navigation */
+    .na-cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .na-illustration__main {
+        height: auto;
+        width: 90vw;
+    }
 }

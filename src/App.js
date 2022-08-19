@@ -13,7 +13,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" />
         <Routes>
           <Route path="/navigation" element={<Navigation/>} />
           <Route path="/about" element={<About/>} />
@@ -21,25 +20,7 @@ function App() {
           <Route path="/blog" element={<Blog/>} />
           <Route path="/" element={<Home/>} />
         </Routes>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/navigation">Navigation</Link>
-            </li>
-            <li>
-              <Link to="/portfolio">Portfolio</Link>
-            </li>
-            <li>
-              <Link to="/blog">Blog</Link>
-            </li>
-          </ul>
-        </nav>
+        
 
       </header>
     </div>

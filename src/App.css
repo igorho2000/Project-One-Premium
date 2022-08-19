@@ -30,28 +30,49 @@ a:link, a:visited {
     font-weight: 400;
     margin-right: 5%;
 }
+@keyframes hi {
+    0% {opacity: 0; transform: translateY(5rem);}
+    25% {opacity: 1; transform: translateY(5rem);}
+    55% {opacity: 1; transform: translateY(5rem);}
+    100% {opacity: 1; transform: translateY(0);}
+}
 .ho-description__hi {
     /* color: rgb(0, 138, 169); Alternative color */
     color: white;
     font-size: 5rem;
     text-shadow: gray 1.5px 1.5px 5px;
     font-weight: 700;
+    animation: hi 1.45s ease-in-out;
+}
+@keyframes igor {
+    0% {opacity: 0;}
+    86% {opacity: 0;}
+    100% {opacity: 1;}
 }
 .ho-description__igor {
     font-size: 2rem;
+    animation: igor 1.7s ease-out;
     /* margin-top: -1rem; */
+}
+@keyframes joblogo {
+    0% {opacity: 0;}
+    87.5% {opacity: 0;}
+    100% {opacity: 1;}
 }
 .ho-description__job {
     font-size: 1rem;
     font-style: italic;
+    animation: joblogo 2.5s ease-out;
 }
 .ho-logo {
     height: 180px;
     margin-left: 5%;
+    animation: joblogo 2.5s ease-out;
 }
 .ho-nav {
     display: flex;
     justify-content: center;
+    animation: joblogo 2.5s ease-out;
 }
 .ho-tonavigation {
     margin: 5rem auto;

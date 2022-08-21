@@ -60,3 +60,34 @@
     animation-name: extend;
     animation-duration: 1.8s;
 }
+
+@media (orientation: landscape) {
+    .tr-img {
+        width: 35vw;
+    }
+    .tr-wheel {
+        width: 7.5vw;
+        left: 5vw;
+    }
+    .tr-sled {
+        width: 17.875vw;
+        left: 1vw;
+    }
+    .tr-line {
+        width: 72.12vw; 
+        left: 8.75vw;
+        border-bottom: solid rgb(41, 41, 41) 0.3vw;
+    }
+    @keyframes turn {
+        0% {transform: rotateZ(0deg); left: 28.56vw;}
+        100% {transform: rotateZ(-360deg); left: 5vw;}
+    }
+    @keyframes slide {
+        0% {left: 24.56vw;}
+        100% {left: 1vw;}
+    }
+    @keyframes extend {
+        0% {width: 50vw; left: 32.31vw;}
+        100% {width: 72.12vw; left: 8.75vw;}
+    }
+}

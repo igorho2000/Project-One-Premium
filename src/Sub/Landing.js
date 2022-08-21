@@ -10,8 +10,8 @@ export default function Landing() {
             <div className="ho-description">
                 <h1 className='ho-description__hi'>Hi.</h1>
                 <h2 className='ho-description__igor'>It's <strong style={{textShadow: "gray 1px 1px 5px", color: "white"}}>IGOR</strong>,</h2>
-                <h3 className='ho-description__job'>Web Developer / Designer</h3>
-                <h3 className='ho-description__job'>& Project Manager</h3>
+                <h3 className='ho-description__job'>A Web Developer / Designer</h3>
+                <h3 className='ho-description__job'>who enjoys Project Management</h3>
             </div>
             <img className='ho-logo' src="logo-main.svg" />
         </div>

@@ -3,7 +3,6 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     background-image: radial-gradient(circle at 75% 50%, rgb(213, 244, 255) 0%, rgb(153, 228, 255) 55%, rgb(91, 212, 255) 100%);
     margin: 0;
-    overflow-y: hidden;
 }
 
 h1, h2, h3, p {
@@ -13,6 +12,48 @@ h1, h2, h3, p {
 
 a:link, a:visited {
     text-decoration: none;
+}
+
+/* General Styles */
+.ge-infocont {
+    display: grid;
+    grid-template-columns: 40vw 200px;
+    grid-template-areas:
+        "header header"
+        "main sidebar";
+    column-gap: 5%;
+    row-gap: 3%;
+    margin: 3rem calc(30vw - 100px);
+}
+.ge-header {
+    grid-area: header;
+}
+.ge-return {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.ge-return__text {
+    font-size: 1rem;
+    margin-left: 4px;
+    color: black;
+    font-weight: 700;
+    transition: text-shadow ease-in-out 0.2s;
+}
+.ge-return__text:hover, .ge-return__text:active {
+    text-shadow: gray 1px 1px 2px;
+}
+.ge-header__title {
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 5rem;
+    text-shadow: gray 1.5px 1.5px 5px;
+    font-weight: 700;
+}
+.ge-text {
+    text-align: justify;
+    font-size: 1.1rem;
 }
 
 /* Home */
@@ -100,6 +141,11 @@ a:link, a:visited {
 }
 .na-illustration--absolute {
     position: absolute;
+    transition: transform 0.2s;
+    
+}
+.na-illustration--absolute:hover {
+    transform: translate3d(1.5%, 1.5%, 0);
 }
 .na-illustration__about {
     left: 6%;
@@ -136,6 +182,17 @@ a:link, a:visited {
         background-image: none;
         background-color: rgb(140, 223, 253);
     }
+    /* General */
+    .ge-infocont {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        margin: 3rem 10vw;
+    }
+    .ge-text {
+        margin: 1rem 0 2rem;
+    }
+
     /* Home */
     .ho-cont {
         flex-direction: column-reverse;

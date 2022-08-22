@@ -9,11 +9,15 @@ import About from './Sub/About';
 import Portfolio from './Sub/Portfolio';
 import Blog from './Sub/Blog';
 import Transition from './Sub/Transition';
-
+import {BlogList} from './Sub/Blog/PostsArray';
+import Posts from './Sub/Blog/Posts';
 
 
 function App() {
-  
+  const Blogpaths = BlogList.map((item, index) => (
+    <Route path={`/blog/${item.type}${index}`} element={<Posts info={item}/>} />
+  ))
+
   const [transition, setTransition] = React.useState({
     inProgress: false,
     toggleTransition: doToggleTransition
@@ -37,11 +41,13 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Routes>
+            
             <Route path="/navigation" element={<Navigation/>} />
             <Route path="/about" element={<About/>} />
             <Route path="/portfolio" element={<Portfolio/>} />
             <Route path="/blog" element={<Blog/>} />
             <Route path="/" element={<Home/>} />
+            {Blogpaths}
           </Routes>
         </header>
       </div>

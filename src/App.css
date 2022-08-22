@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
     margin: 0;
     font-weight: normal;
 }
@@ -21,8 +21,8 @@ a:link, a:visited {
     grid-template-areas:
         "header header"
         "main sidebar";
-    column-gap: 5%;
-    row-gap: 3%;
+    column-gap: 2.2rem;
+    row-gap: 1.5rem;
     margin: 3rem calc(30vw - 100px);
 }
 .ge-header {
@@ -172,7 +172,93 @@ a:link, a:visited {
     top: 33%;
     width: 8.48%;
 }
+/* Blog */
+.bl-listcont {
+    display: grid;
+    grid-template-columns: 47% 47%;
+    column-gap: 3%;
+    row-gap: 3%;
+    height: fit-content;
+}
+.bl-infocard {
+    background-color: white;
+    padding: 12px;
+    height: fit-content;
+    border-radius: 16px;
+    border: black solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: background-color, box-shadow 0.2s;
+}
+.bl-infocard__title {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 4px;
+}
+.bl-infocard__tag {
+    background-color: rgb(0, 60, 74);
+    color: white;
+    margin: 8px 0 12px;
+    padding: 0 4px;
+    border-radius: 4px;
+    font-weight: lighter;
+}
+.bl-infocard__banner {
+    width: 100%;
+    border-radius: 8px;
+}
+.bl-infocard__button {
+    background-color: rgb(240, 206, 152);
+    box-shadow: 3px 4px rgb(156, 118, 57);
+    color: white;
+    padding: 0.2rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 1.2rem;
+    position: absolute;
+    bottom: 3rem;
+    opacity: 0;
+    transition: opacity, background-color 0.2s;
+}
 
+.bl-infocard:hover {
+    box-shadow: 3px 3px rgb(67, 67, 67);
+    background-color: rgb(167, 167, 167);
+}
+.bl-infocard:hover .bl-infocard__button {
+    opacity: 1;
+}
+.bl-infocard__button:hover {
+    background-color: rgb(212, 167, 95);
+}
+.bl-infocard:hover .bl-infocard__title, 
+.bl-infocard:hover .bl-infocard__tag, 
+.bl-infocard:hover .bl-infocard__banner {
+    opacity: 0.2;
+}
+
+.bl-content {
+    text-align: justify;
+}
+.bl-sectiontitle {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    color:rgb(78, 118, 126);
+}
+.bl-posttitle {
+    font-size: 2rem;
+}
+.bl-blogimage {
+    width: 100%;
+}
+.bl-caption {
+    font-style: italic;
+    font-size: 0.8rem;
+}
 
 /* Adjustments for portrait mode */
 
@@ -187,10 +273,14 @@ a:link, a:visited {
         display: flex;
         flex-direction: column;
         width: 80vw;
+        height: fit-content;
         margin: 3rem 10vw;
     }
     .ge-text {
         margin: 1rem 0 2rem;
+    }
+    .ge-header__title {
+        font-size: 3rem;
     }
 
     /* Home */
@@ -218,4 +308,16 @@ a:link, a:visited {
         height: auto;
         width: 90vw;
     }
+    /* Blog */
+    .bl-listcont {
+        grid-template-columns: 100%;
+        row-gap: 1rem;
+        grid-template-rows: auto;
+        margin: 1.5rem 5vw;
+    }
+    .bl-infocard__button {
+        opacity: 1;
+    }
+    /* Portfolio */
+    
 }

@@ -247,7 +247,9 @@ a:link, a:visited {
 .bl-sectiontitle {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
-    color:rgb(78, 118, 126);
+    font-size: 1.3rem;
+    color:white;
+    text-shadow: 1.5px 1.5px gray;
 }
 .bl-posttitle {
     font-size: 2rem;
@@ -259,6 +261,63 @@ a:link, a:visited {
     font-style: italic;
     font-size: 0.8rem;
 }
+
+/* Portfolio */
+.po-infocont {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    padding: 12px 0 16px;
+    background-color: white;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow, background-color 0.2s;
+    margin-bottom: 1rem;
+}
+.po-infocont:hover {
+    box-shadow: 3px 3px rgb(67, 67, 67);
+    background-color: rgb(240, 240, 240);
+}
+.po-infocont__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 4px 0 8px;
+    
+}
+.po-imagecont {
+    display: flex;
+    flex-direction: row;
+    margin: 8px 0 16px;
+}
+.po-imagecont__image {
+    height: 150px;
+    border: gray solid 2px;
+    border-radius: 8px;
+    margin: 0 8px;
+}
+.po-buttoncont {
+    display: flex;
+    flex-direction: row;
+}
+.po-button {
+    background-color: rgb(240, 206, 152);
+    box-shadow: 3px 4px rgb(156, 118, 57);
+    color: white;
+    padding: 0.2rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 1.2rem;
+    opacity: 1;
+    transition: opacity, background-color 0.2s;
+    font-weight: 600;
+    margin-right: 8px;
+}
+.po-button:hover {
+    background-color: rgb(212, 167, 95);
+    
+}
+
 
 /* Adjustments for portrait mode */
 
@@ -319,5 +378,21 @@ a:link, a:visited {
         opacity: 1;
     }
     /* Portfolio */
-    
+    .po-imagecont {
+        flex-direction: column;
+        align-items: center;
+    }
+    .po-imagecont__image {
+        height: auto;
+        width: 200px;
+        margin-bottom: 8px;
+    }
+    .po-buttoncont {
+        flex-direction: column;
+        align-items: center;
+    }
+    .po-button {
+        margin-bottom: 8px;
+        width: fit-content;
+    }
 }

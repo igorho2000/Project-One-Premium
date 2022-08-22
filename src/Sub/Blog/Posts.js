@@ -59,6 +59,7 @@ export default function Posts(props) {
             </div>
           </div>
           <div bl-content>
+            <img className='bl-blogimage' src={`../../blog/${props.info.banner}`} /><br /><br />
             {BlogContent(props.info.content)}
           </div>
           <Sidebar />

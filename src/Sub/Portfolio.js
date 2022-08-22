@@ -11,17 +11,14 @@ function Portfolio() {
     <div className='po-infocont' key={`Port${index}`}>
             <h3 className='po-infocont__title'>{item.title}</h3>
             <div className='po-imagecont'>
-              <img className='po-imagecont__image' src={`../portfolio/${item.Img[0]}`}/>
-              <img className='po-imagecont__image' src={`../portfolio/${item.Img[1]}`}/>
-              <img className='po-imagecont__image' src={`../portfolio/${item.Img[2]}`}/>
+              <img className='po-imagecont__image' src={`../portfolio/${item.banner}`}/>
             </div>
             <div className='po-buttoncont'>
               <TransitionContext.Consumer>
                 {({toggleTransition}) => (
-                  <Link to={`port${index}`} className='po-button' onClick={toggleTransition}>Gallery</Link>
+                  <Link to={`port${index}`} className='po-button' onClick={toggleTransition}>Visit Gallery</Link>
                 )}
               </TransitionContext.Consumer>
-              <a className='po-button'>Download Docs</a>
             </div>
         </div>
   ))

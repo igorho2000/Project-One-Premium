@@ -284,7 +284,7 @@ a:link, a:visited {
     font-weight: 700;
     font-family: 'Josefin Sans', sans-serif;
     margin: 4px 0 8px;
-    
+    text-align: center;
 }
 .po-imagecont {
     display: flex;
@@ -292,14 +292,17 @@ a:link, a:visited {
     margin: 8px 0 16px;
 }
 .po-imagecont__image {
-    height: 150px;
-    border: gray solid 2px;
-    border-radius: 8px;
+    width: 35vw;
     margin: 0 8px;
 }
 .po-buttoncont {
     display: flex;
     flex-direction: row;
+}
+.po-post__buttoncont {
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
 }
 .po-button {
     background-color: rgb(240, 206, 152);
@@ -312,6 +315,8 @@ a:link, a:visited {
     transition: opacity, background-color 0.2s;
     font-weight: 600;
     margin-right: 8px;
+    margin-bottom: 8px;
+    text-align: center;
 }
 .po-button:hover {
     background-color: rgb(212, 167, 95);
@@ -383,13 +388,16 @@ a:link, a:visited {
         align-items: center;
     }
     .po-imagecont__image {
-        height: auto;
-        width: 200px;
+        width: 70vw;
         margin-bottom: 8px;
     }
     .po-buttoncont {
         flex-direction: column;
         align-items: center;
+    }
+    .po-post__buttoncont {
+        flex-direction: column;
+        width: auto;
     }
     .po-button {
         margin-bottom: 8px;

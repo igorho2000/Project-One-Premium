@@ -106,7 +106,7 @@
     top: 0;
     background-color: black;
     animation-name: end;
-    animation-duration: 3s;
+    animation-duration: 5s;
 }
 .end-credit {
     margin-left: 20vw;
@@ -115,5 +115,5 @@
     font-weight: bold;
     color: white;
     animation-name: end;
-    animation-duration: 6s;
+    animation-duration: 5s;
 }

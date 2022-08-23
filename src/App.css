@@ -140,11 +140,18 @@ a:link, a:visited {
 }
 .ho-nav {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     animation: joblogo 2.5s ease-out;
 }
+.ho-nav h2 {
+    text-align: center;
+    margin: 6rem auto 0;
+    color: rgb(8, 103, 124);
+    font-size: 1.4rem;
+}
 .ho-tonavigation {
-    margin: 5rem auto;
+    margin: 0.8rem auto;
     color: rgb(0, 138, 169);
     text-shadow: transparent 1.5px 1.5px 5px;
     transition: text-shadow ease-in-out 0.2s;
@@ -359,7 +366,7 @@ a:link, a:visited {
 /* Adjustments for portrait mode */
 
 @media (orientation: portrait) {
-    body {
+    .App {
         /* Too tedious to implement gradient in mobile, replace with static color */
         background-image: none;
         background-color: rgb(140, 223, 253);

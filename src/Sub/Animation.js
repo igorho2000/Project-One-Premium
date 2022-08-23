@@ -18,16 +18,16 @@ export default function Animation(props) {
                 <An src={['2-mainscene.svg']} pos={props.position} start={800} end={850} 
                 startSize={100} startOpacity={0} startX={0} startY={0} 
                 endOpacity={1}/>
-                <An src={['2-taiwanframe.svg']} pos={props.position} start={850} end={1260} 
+                <An src={['2-taiwanFrame.svg']} pos={props.position} start={850} end={1260} 
                 startSize={26} startOpacity={1} startX={45} startY={43.5} 
                 />
                 <An src={['2-taiwan.svg']} pos={props.position} start={850} end={1260} 
                 startSize={10} startOpacity={1} startX={53} startY={45} 
                 />
-                <An src={['2-taiwanframe.svg']} pos={props.position} start={750} end={850} 
+                <An src={['2-taiwanFrame.svg']} pos={props.position} start={750} end={850} 
                 startSize={100} startOpacity={1} startX={0} startY={30} 
                 endSize={26} endX={45} endY={43.5}/>
-                <An src={['2-taiwanframe.svg']} pos={props.position} start={700} end={750} 
+                <An src={['2-taiwanFrame.svg']} pos={props.position} start={700} end={750} 
                 startSize={100} startOpacity={0} startX={0} startY={30} 
                 endOpacity={1}/>
                 <An src={['2-taiwan.svg']} pos={props.position} start={750} end={850} 
@@ -123,7 +123,7 @@ export default function Animation(props) {
                 <An src={['2-mainscene.svg']} pos={props.position} start={1260} end={1310} 
                 startSize={100} startOpacity={1} startX={0} startY={0} 
                 endOpacity={0} />
-                <An src={['2-taiwanframe.svg']} pos={props.position} start={1260} end={1310} 
+                <An src={['2-taiwanFrame.svg']} pos={props.position} start={1260} end={1310} 
                 startSize={26} startOpacity={1} startX={45} startY={43.5} 
                 endOpacity={0} />
                 <An src={['2-taiwan.svg']} pos={props.position} start={1260} end={1310} 

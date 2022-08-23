@@ -54,7 +54,7 @@ function App() {
         ...state,
         endAnimation: state.endAnimation === true ? false : true,
       }))
-    }, 6100)
+    }, 5000)
   }
 
   return (

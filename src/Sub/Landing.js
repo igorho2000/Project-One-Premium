@@ -18,9 +18,10 @@ export default function Landing(props) {
             <img className='ho-logo' src="logo-main.svg" />
         </div>
         <div className='ho-nav'>
+            <h2>Scroll Slowly to View My Story</h2>
             <TransitionContext>
             {({toggleTransition}) => (
-                <Link to="/navigation/" className='ho-tonavigation' onClick={toggleTransition}>Go Straight to Portfolio</Link>
+                <Link to="/navigation/" className='ho-tonavigation' onClick={toggleTransition}>Or Go Straight to Portfolio</Link>
             )}
             </TransitionContext>
             

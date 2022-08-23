@@ -1,7 +1,7 @@
 // p= paragraph, v= video, c= caption, h= header, i= image, s= strong, A= text before link, a= link
 // links should be embedded in paragraph
 
-// "p","", / "v","", / "c","", / "h", "", / "i", "", / "s", "", / "A", "", / "a", "",
+
 
 export const BlogList = [
     {
@@ -58,7 +58,7 @@ export const BlogList = [
             "c","From left to right: (Design) Alice, Vera, Coco, Vivian, Julie [Front] , Nancy; (Planning) Ashley, Alice, Igor [Front], Jessica, Eileen, Jim",
             "z","Follow ", 
             "a", ["https://www.facebook.com/TEDxNTUtw", "TEDxNationalTaiwanUniversity "],
-            "p", "on Facebook!"
+            "f", "on Facebook! "
         ]
     },
     {
@@ -67,9 +67,65 @@ export const BlogList = [
         date: "July 13th 2022",
         banner: "1-banner.png",
         content: [
-            "p", "yayyyy"
+            "p", "People who know me well are all aware of one of my biggest passions in life, YouTube. I recently checked my phone usage stats and I’m quite embarrassed to reveal that I’ve logged an average of four hours per day on YouTube. In actuality, I don’t spend four hours per day watching memes or comedy videos. I usually spend a significant portion of time on YouTube watching the news, educational videos, or listening to music. Regardless of my excuse, it isn’t hard to infer that the media type of “video” is extremely appealing to me. However, for someone obsessed with video, it took me until a few months ago to try my hand at filming and editing a video on my own. Here’s how that went.",
+            "h", "MOTIVATION",
+            "p", "Last December, I was the curator of an ambitious exhibition. To ensure we had stellar visitor numbers, my team and I brainstormed extensively on what sort of marketing we could do to promote the exhibition. Creating a commercial was one of the most intuitive ideas we had.",
+            "p", "The problem was, that no one in our team had any experience filming and editing videos, let alone a promo film. Since we had an extremely tight budget, that left us only one option if we wanted to produce a video for the exhibition. Someone had to learn how to film and edit from scratch. As you might have guessed, I volunteered. For some stupid reason, I thought I wasn’t busy enough at the time.",
+            "h", "LEARNING THE BASICS",
+            "p","I spent one weekend learning the craft of filmmaking and postproduction. Let’s talk about the editing portion first. I’m quite a cheap person, as such, there was no way I was paying for Adobe Premiere. I also care way too much about copyright to install a bootleg version. After an hour of researching, I settled on using Da Vinci Resolve, a free professional-looking video editor even though online reviews all mention that it is more challenging to learn. ",
+            "z", "To learn this supposedly challenging software, I watched a few tutorials. I found the one by Justin Brown (",
+            "a", ["https://www.youtube.com/watch?v=63Ln33O4p4c","link to the video"],
+            "p",") to be the most concise and well-taught by far. Before long, I was familiar with most of the basic functions of the editor and felt confident. One side note. To this day, I still use Da Vinci Resolve for all my video projects. It is an amazing editor and I don’t understand why anyone would pay for Adobe Premiere with this awesome free application out there. Highly recommend.",
+            "p","As for the filming side, I remember simply finding an article about filming with an iPhone and then going outside to practice. Unfortunately, I forgot which article I read. It should be easy to find good tutorials on the subject so I’ll leave that to you.",
+            "h", "FILMING THE PROMO",
+            "p","Soon after I picked up the above theoretical knowledge, I discussed with my team to come up with ideas for the promo. In a nutshell, the exhibition was about the various impacts a typical college student would face and how he or she may try to make peace with them. We really wanted to showcase this core theme in the promo. In the end, our team came up with the idea of showing some of the key scenarios in the exhibition, alternating between characters to swiftly demonstrate the process one may go through when faced with challenging situations.",
+            "p","Due to our lack of experience, filming took a bit longer than expected. However, it was also quite fun (and addicting) to shout “action” like a real director. I got quite well at capturing different angles of the same scene which helped broaden my options when editing. Even though I kind of screwed up the exposure settings during filming, I did my best to adjust the footage via Da Vinci Resolve’s fantastic color editing feature. In my opinion, this promo wasn’t a bad first attempt at filmmaking. Please enjoy the final result.",
+            "v","https://www.youtube.com/embed/vi4KmVnspfw",
+            "h", "GOING THE EXTRA MILE",
+            "p","Our team was quite pleased with the result of the promo. Since we had a little more spare time before the exhibition began, we began to brainstorm other ways we could utilize video in the exhibition. Someone suggested a behind-the-scenes short documentary to explain the thought process behind the curation of the exhibition. I liked the idea (partly due to me having the opportunity to say “action” again) and we got to work immediately, arranging interviews with key stakeholders of the exhibition. Even though the video is in Mandarin, there are English subtitles. Please enjoy the final result.",
+            "v","https://www.youtube.com/embed/KCkDiDhgj9k",
+            "h", "FINAL THOUGHTS",
+            "p","Even though there were no flashy animations or transitions, I was still quite proud and happy I got the chance to learn how to edit and film videos. In the months to come, I have produced a few more videos and even learned how to do keyframe animations with Da Vinci Resolve (a story for another time). If you are even remotely interested in trying your hand at video production, I highly encourage you to just go ahead and start filming. The process is extremely labor-intensive, but my oh my is the result satisfying.",
+            "h", "ACKNOWLEDGEMENTS",
+            "f","I would like to thank all members TEDxNationalTaiwanUniversity for the support and trust they have vested in me despite my high chance of failure at the time. I would especially like to thank Alice, Ashley, Eileen, Jim, Jessica, and Nicole for assisting with the script, filming, and editing. ",
         ]
     },
-
-
+    {
+        title: "The BackPacker Mindset",
+        type: "TRAVEL",
+        date: "July 17th 2022",
+        banner: "2-banner.jpg",
+        content: [
+            "p","I have enjoyed the thrill of backpacking travel for around four years since I did my first solo trip in 2018. Since the pandemic hit, my options became limited and I have not left Taiwan for over 2 years. During this time, I have seen numerous friends go on exchanges to North America and Europe (the only legitimate way of leaving the country for the past two years), envious of their freedom and experiences. ",
+            "p","However, I suspect that this feeling won’t last. For many, an exchange is their first and probably last chance to freely travel for an extended period due to prior and subsequent commitments. This is and will not be the case for me, which is why I wasn’t that motivated to apply for an exchange.",
+            "p","I noticed that while most of my friends all thoroughly enjoyed their journeys across these foreign lands, everyone’s motivation and takeaways seem to be different. In a way, most people’s exchanges could be described as their first “backpacking trip”, a journey where one may be left satisfied seeing a chunk of the world, whilst others may be left thirsty for more.",
+            "p","Surprisingly, I find that the vast majority of my peers fall into the former category. Being in that category doesn’t mean that the person won’t want to travel in the future, it’s just that a slew of other things such as career, family, education, relationships, etc. will always take precedent before travel. And while I have done significantly less traveling than many of my peers over the past 2 years, I would always firmly place myself in the latter category. This implies that when I consider major life choices, whether I would still possess the ability to travel plays a key role in my final decision.",
+            "p","I got curious whilst working on this website about what I was thinking when I embarked on and finished my first backpacking trip to Western Europe. I knew where to find the answer. I have written short posts on an Instagram account (@igor_backpacker) since the first trip and I recall that I have written material related to my motivation and takeaways. As I am writing this, I still haven’t read what I wrote over four years ago. What has led me to think the way I think today? What is my backpacker mindset? I won’t edit anything I wrote four years ago.",
+            "h", "BEFORE THE TRIP",
+            "p","Today is the big day. The day I’ve been looking forward to for 2 years. As I watch Taiwan gradually shrinking, I finally realized that this is it. I am going on a backpacking trip to Europe. On my own. I keep asking myself why I want to do this so much. And I think there are three reasons. ",
+            "p","To begin with, I enjoy being challenged. After gaining admission to NTU in March, there was nothing to do except play and relax all day. I didn’t like that. I am very competitive and this lifestyle will make me soft. I desperately needed to think and solve problems. I believe this trip will offer lots of opportunities to do so. ",
+            "p","Next, Taiwan is not enough. As we globalize, it has become more and more important for us to learn about other cultures and values. There are 8 billion people in this world and only 23 million in Taiwan. I want to experience Europe and get to know the people there to broaden my horizon. ",
+            "p","Last but not least, there are lots of places I’ve always wanted to visit and revisit. Namely, the Louvre, Pompeii, nazi documentation, and my host family in Italy. Books and videos are not enough. Only when you visit in person will you be able to completely understand the place. ",
+            "p","To conclude, I will like to thank some people who made this trip possible. Firstly, my parents. Lest their financial support, this trip wouldn’t have been possible and I am extremely grateful to be born into such a wonderful family. Second, my friends in Italy - the Colombo family. Thank you, especially to Salvatore and Chiara for assisting me in booking and planning the Italian part of my trip. Also, thank you for allowing me to stay at your place in Milan. Thank you for reading this long and boring essay. I will post at least once per day to share my thoughts and tips during this epic trip to Europe.",
+            "h", "AFTER THE TRIP",
+            "s", "The backpacker spirit:",
+            "p","I’ve talked about my trip with many friends, sharing many interesting and funny stories. However, I’d scarcely told anyone how I felt during the trip and what I learned. One reason is that no one gives a damn, but it’s mostly because my biggest revelation came after my backpacking trip.",
+            "p","During my backpacking trip, I visited different destinations every single day. Every morning when I woke up, I was always super excited about the adventures to come. Too long had I studied the same boring subjects repeatedly during high school. Like a bird freed from its cage, I took every opportunity during my trip to experience everything.",
+            "p","I thought that I found the formula to true happiness - travel. Unfortunately, after I came back to Taiwan, I realized a fundamental flaw in my formula. It’s quite obvious. You can’t travel every day.",
+            "p","Henceforth began the first few months of college. I made some good friends, participated in some extracurricular activities, etc. But I just couldn’t stop thinking about how great I felt during my backpacking trip and that made me occasionally depressed. Little things often agitated me. An unread message, rain, a point lost from an unimportant quiz.",
+            "p","I started looking for flights, trying to escape the reality around me. It was then that I stumbled upon Kenji’s blog.",
+            "p","I started thinking about his enthusiasm, positivity, and energy. No matter what obstacles were in his way, he always laughed loudly and said it was fine. I realized that the answer was under my nose all along.",
+            "p","The reason why travel makes us so happy is that we get the opportunity to forget about the little things in life. If we make an effort to ditch negative thoughts and stop caring about the small, irritable issues in life, every day is like travel.",
+            "p","It’s hard to state what I truly learned in exact words and the above may seem like a pile of crap to some people but this is what I truly think.",
+            "h", "CONCLUSION",
+            "p","That went a little differently than I thought it would. The motivation I had four years ago is consistent with what I think today. However, I was a bit surprised by my takeaway a few years back. It left me deep in thought for many minutes. It seems that as time passed by, I have forgotten one of the most important lessons I learned from traveling.",
+            "s", "“If we make an effort to ditch negative thoughts and stop caring about the small, irritable issues in life, every day is like travel.” ",
+            "p","It is easy for me to say that I love traveling and would always make the ability to travel a priority. However, traveling is shouldn’t be the solution. When my friends got to travel, I got jealous in part due to my monotonous life. I planned to take a big trip after military service, framing it as a reward for my current suffering. Forgive me for reversing my opinion mid-article, but I now realize what I wrote in the first few paragraphs were quite short-sighted.",
+            "p","I love traveling. What I should’ve done and should do now is try to transform every day into a trip. That’s the true backpacker mindset. I’m glad I’ve found it once again.",
+            "h", "ACKNOWLEDGEMENTS",
+            "f","Thanks to past me for the valuable lesson I re-learned whilst writing this article. ",
+        ]
+    },
 ]
+
+// "p","", / "v","", / "c", "", / "h", "", / "i", "", / "s", "", / "z", "", / "a", ["",""],

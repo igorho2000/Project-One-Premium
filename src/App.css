@@ -257,6 +257,10 @@ a:link, a:visited {
 .bl-blogimage {
     width: 100%;
 }
+.bl-blogvideo {
+    width: 40vw;
+    height: 22.5vw;
+}
 .bl-caption {
     font-style: italic;
     font-size: 0.8rem;
@@ -381,6 +385,10 @@ a:link, a:visited {
     }
     .bl-infocard__button {
         opacity: 1;
+    }
+    .bl-blogvideo {
+        width: 80vw;
+        height: 45vw;
     }
     /* Portfolio */
     .po-imagecont {

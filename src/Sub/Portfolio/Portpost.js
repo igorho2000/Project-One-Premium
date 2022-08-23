@@ -2,7 +2,7 @@ import '../../App.css';
 import React from "react";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import {TransitionContext} from "../../context"
-import Sidebar from './Sidebar';
+import Sidebar from '../Sidebar';
 
 export default function PortPost(props) {
     const gallery = props.info.img.map((item) => (
@@ -46,8 +46,16 @@ export default function PortPost(props) {
             <p>{props.info.description}</p><br /><br />
             <h3 class='bl-sectiontitle'>GALLERY</h3><br />
             {gallery}
+            <TransitionContext.Consumer>
+              {({toggleTransition}) => (
+                <Link to="/portfolio" onClick={toggleTransition} className='ge-return'>
+                  <img src="../icons/icon-back.svg" />
+                  <h2 className='ge-return__text'>Back to Portfolio</h2>
+                </Link>
+              )}
+            </TransitionContext.Consumer>
           </div>
-          <Sidebar />
+          <Sidebar path="../" />
         </div>
     );
 }

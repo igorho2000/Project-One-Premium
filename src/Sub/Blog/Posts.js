@@ -2,8 +2,9 @@ import '../../App.css';
 import React from "react";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import {TransitionContext} from "../../context"
-import Sidebar from './Sidebar';
+import Sidebar from '../Sidebar';
 import {BlogList} from './PostsArray';
+import { calculateNewValue } from '@testing-library/user-event/dist/utils';
 
 export default function Posts(props) {
     function BlogContent(array) {
@@ -16,8 +17,11 @@ export default function Posts(props) {
                 case 'p':
                     blog.push(<p style={{display: "inline",}}>{array[i]}<br /><br /></p>)
                     break
+                case 'f':
+                    blog.push(<p style={{display: "inline",}}>{array[i]}</p>)
+                    break
                 case 's':
-                    blog.push(<p style={{display: "inline",}}><strong>{array[i]}</strong></p>)
+                    blog.push(<p style={{display: "inline",}}><strong>{array[i]}</strong><br /><br /></p>)
                     break
                 case 'c':
                     blog.push(<p className='bl-caption' style={{display: "inline",}}>{array[i]}<br /><br /></p>)
@@ -35,6 +39,7 @@ export default function Posts(props) {
                     blog.push(<a style={{display: "inline",}} href={array[i][0]} target="_blank">{array[i][1]}</a>)
                     break
                 case 'v':
+                    blog.push(<div><iframe className='bl-blogvideo' src={array[i]}></iframe><br /><br /></div> )
                     continue
             }
         }
@@ -61,8 +66,18 @@ export default function Posts(props) {
           <div bl-content>
             <img className='bl-blogimage' src={`../../blog/${props.info.banner}`} /><br /><br />
             {BlogContent(props.info.content)}
+            <img style={{display: "inline", width: "0.9rem"}} src={`../../logo-o-3d.svg`} />
+            <br /><br />
+            <TransitionContext.Consumer>
+              {({toggleTransition}) => (
+                <Link to="/blog" onClick={toggleTransition} className='ge-return'>
+                  <img src="../icons/icon-back.svg" />
+                  <h2 className='ge-return__text'>Back to Blog</h2>
+                </Link>
+              )}
+            </TransitionContext.Consumer>
           </div>
-          <Sidebar />
+          <Sidebar path="../" />
         </div>
     );
 }

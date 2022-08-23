@@ -1,0 +1,32 @@
+.an-cont {
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.an-main {
+    position: relative;
+    width: 69.25vh;
+    height: 95vh;
+}
+
+.an-main img {
+    max-height: 95vh;
+    position: absolute;
+}
+
+@media (orientation: portrait) {
+    .an-main {
+        position: relative;
+        width: 90vw;
+        height: 123.58vw;
+    }
+    .an-main img {
+        max-height: none;
+        max-width: 90vw;
+    }
+}

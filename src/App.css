@@ -1,7 +1,15 @@
+.App {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    background-image: radial-gradient(circle at 75% 50%, rgb(213, 244, 255) 0%, rgb(153, 228, 255) 55%, rgb(91, 212, 255) 100%);
+}
+
 body {
     /* font-family: 'Josefin Sans', sans-serif; */
     font-family: 'Nunito Sans', sans-serif;
-    background-image: radial-gradient(circle at 75% 50%, rgb(213, 244, 255) 0%, rgb(153, 228, 255) 55%, rgb(91, 212, 255) 100%);
     margin: 0;
 }
 
@@ -57,6 +65,15 @@ a:link, a:visited {
 }
 
 /* Home */
+.ho-canvas {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+}
+.ho-scroll {
+    height: calc(100vh + 2000px);
+}
 .ho-cont {
     display: flex;
     flex-direction: row;

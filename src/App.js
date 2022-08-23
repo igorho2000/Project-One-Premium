@@ -44,20 +44,25 @@ function App() {
 
   return (
     <TransitionContext.Provider value={transition}>
-      <div className="App">
+      
+      <Routes>
+        <Route path="/" element={<Home/>} />
+      </Routes>
+      
         <header className="App-header">
+          <div className='App'></div>
           <Routes>
             
             <Route path="/navigation" element={<Navigation/>} />
             <Route path="/about" element={<About/>} />
             <Route path="/portfolio" element={<Portfolio/>} />
             <Route path="/blog" element={<Blog/>} />
-            <Route path="/" element={<Home/>} />
+            
             {Blogpaths}
             {Portpaths}
           </Routes>
         </header>
-      </div>
+      
       <Transition inProgress={transition.inProgress} />
     </TransitionContext.Provider>
     

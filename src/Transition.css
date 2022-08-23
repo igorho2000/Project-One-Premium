@@ -91,3 +91,29 @@
         100% {width: 72.12vw; left: 8.75vw;}
     }
 }
+
+@keyframes end {
+    0% {opacity: 1;}
+    25% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.end-background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    background-color: black;
+    animation-name: end;
+    animation-duration: 3s;
+}
+.end-credit {
+    margin-left: 20vw;
+    margin-top: 47vh;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    animation-name: end;
+    animation-duration: 6s;
+}

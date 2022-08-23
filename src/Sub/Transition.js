@@ -18,3 +18,11 @@ export default function Transition(props) {
         </div>
     )
 }
+
+export function EndAnimation(props) {
+    return (
+        <div className="end-background" style={{display: props.inProgress ? "block" : "none"}}>
+            <h1 className='end-credit'>Created by Igor Ho, 8/23/2022</h1>
+        </div>
+    )
+}

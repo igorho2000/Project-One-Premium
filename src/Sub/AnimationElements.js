@@ -31,15 +31,15 @@ export default function An(props) {
         if (startPercent === endPercent) {
             return `${startPercent}%`
         }
-        return `${((endPercent - startPercent) / (end - start)) * (pos - start) + startPercent}`
+        return `${((endPercent - startPercent) / (end - start)) * (pos - start) + startPercent}%`
     }
 
     const output = props.src.map((item) => (
         <img src={`../animation/${item}`} style={{
             opacity: getOpacity(start, end, pos, startOpacity, endOpacity),
             width: getPercent(start, end, pos, startSize, endSize),
-            Top: getPercent(start, end, pos, startY, endY),
-            Left: getPercent(start, end, pos, startX, endX)
+            top: getPercent(start, end, pos, startY, endY),
+            left: getPercent(start, end, pos, startX, endX)
         }} />
     ))
 

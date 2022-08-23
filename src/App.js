@@ -9,6 +9,7 @@ import About from './Sub/About';
 import Portfolio from './Sub/Portfolio';
 import Blog from './Sub/Blog';
 import Transition from './Sub/Transition';
+import { EndAnimation } from './Sub/Transition';
 import {BlogList} from './Sub/Blog/PostsArray';
 import Posts from './Sub/Blog/Posts';
 import {PortList} from './Sub/Portfolio/PortfolioArray';
@@ -26,6 +27,8 @@ function App() {
 
   const [transition, setTransition] = React.useState({
     inProgress: false,
+    endAnimation: false,
+    toggleEndAnimation: doToggleEndAnimation,
     toggleTransition: doToggleTransition
   })
 
@@ -40,6 +43,18 @@ function App() {
         inProgress: state.inProgress === true ? false : true,
       }))
     }, 2100)
+  }
+  function doToggleEndAnimation() {
+    setTransition(state => ({
+      ...state,
+      endAnimation: state.endAnimation === true ? false : true,
+    }))
+    setTimeout(function(){
+      setTransition(state => ({
+        ...state,
+        endAnimation: state.endAnimation === true ? false : true,
+      }))
+    }, 6100)
   }
 
   return (
@@ -64,6 +79,7 @@ function App() {
         </header>
       
       <Transition inProgress={transition.inProgress} />
+      <EndAnimation inProgress={transition.endAnimation} />
     </TransitionContext.Provider>
     
   );

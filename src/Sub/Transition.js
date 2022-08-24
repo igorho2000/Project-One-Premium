@@ -1,4 +1,5 @@
 import '../Transition.css';
+import '../Animation.css';
 import {TransitionContext} from "../context"
 import React from "react";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
@@ -21,8 +22,12 @@ export default function Transition(props) {
 
 export function EndAnimation(props) {
     return (
-        <div className="end-background" style={{display: props.inProgress ? "block" : "none"}}>
-            <h1 className='end-credit'>Created by Igor Ho, 8/23/2022</h1>
+        <div className='end-back' style={{display: props.inProgress ? "block" : "none"}}>
+            <div className="end-background" >
+                <h1 className='end-thank'>Thanks for watching.</h1>
+                <h2 className='end-credit'>Created by Igor Ho, August 2022.</h2>
+            </div>
         </div>
+        
     )
 }

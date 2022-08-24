@@ -94,7 +94,12 @@
 
 @keyframes end {
     0% {opacity: 1;}
-    25% {opacity: 1;}
+    75% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes endfade {
+    0% {opacity: 1;}
+    90% {opacity: 0;}
     100% {opacity: 0;}
 }
 
@@ -102,18 +107,33 @@
     width: 100vw;
     height: 100vh;
     position: fixed;
-    z-index: 3;
+    z-index: 4;
     top: 0;
     background-color: black;
     animation-name: end;
-    animation-duration: 5s;
+    animation-duration: 3s;
+    opacity: 0;
+}
+.end-back {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    background-image: radial-gradient(circle at 75% 50%, rgb(213, 244, 255) 0%, rgb(153, 228, 255) 55%, rgb(91, 212, 255) 100%);
+    animation-name: endfade;
+    animation-duration: 1s;
+    animation-delay: 3s;
 }
 .end-credit {
     margin-left: 20vw;
-    margin-top: 47vh;
     font-size: 1rem;
+    color: white;
+}
+.end-thank {
+    margin-left: 20vw;
+    margin-top: 47vh;
+    font-size: 1.4rem;
     font-weight: bold;
     color: white;
-    animation-name: end;
-    animation-duration: 5s;
 }

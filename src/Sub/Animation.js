@@ -145,23 +145,15 @@ export default function Animation(props) {
                 startSize={100} startOpacity={1} startX={1} startY={3} 
                 />
                 <An src={['text-5.svg']} pos={props.position} start={1490} end={1540} 
-                startSize={35} startOpacity={0} startX={32} startY={40} 
+                startSize={27} startOpacity={0} startX={36} startY={42} 
                  endOpacity={1} />
                  <An src={['text-5.svg']} pos={props.position} start={1540} end={1620} 
-                startSize={35} startOpacity={1} startX={32} startY={40} 
+                startSize={27} startOpacity={1} startX={36} startY={42}  
                 />
                 <An src={['text-5.svg']} pos={props.position} start={1620} end={1670} 
-                startSize={35} startOpacity={1} startX={32} startY={40} 
+                startSize={27} startOpacity={1} startX={36} startY={42} 
                  endOpacity={0} />
-                 <An src={['text-6.svg']} pos={props.position} start={1720} end={1770} 
-                startSize={18} startOpacity={0} startX={69} startY={27.5} 
-                 endOpacity={1} />
-                 <An src={['text-6.svg']} pos={props.position} start={1770} end={1850} 
-                startSize={18} startOpacity={1} startX={69} startY={27.5}  
-                />
-                <An src={['text-6.svg']} pos={props.position} start={1850} end={1900} 
-                startSize={18} startOpacity={1} startX={69} startY={27.5}  
-                 endOpacity={0} />
+                 
                 <An src={['3-spotlight.svg']} pos={props.position} start={1390} end={1440} 
                 startSize={80} startOpacity={0} startX={10} startY={22} 
                  endOpacity={1} />
@@ -177,6 +169,16 @@ export default function Animation(props) {
                 <An src={['3-spotlight.svg']} pos={props.position} start={1850} end={1900} 
                 startSize={60} startOpacity={1} startX={48} startY={12} 
                 endOpacity={0}/>
+
+                <An src={['text-6.png']} pos={props.position} start={1720} end={1770} 
+                startSize={18} startOpacity={0} startX={68.5} startY={29} 
+                 endOpacity={1} />
+                 <An src={['text-6.png']} pos={props.position} start={1770} end={1850} 
+                startSize={18} startOpacity={1} startX={68.5} startY={29}  
+                />
+                <An src={['text-6.png']} pos={props.position} start={1850} end={1900} 
+                startSize={18} startOpacity={1} startX={68.5} startY={29}  
+                 endOpacity={0} />
 
                 {/* Scene 4 */}
                 <An src={['3-background.svg']} pos={props.position} start={1901} end={2410} 
@@ -354,43 +356,43 @@ export default function Animation(props) {
                 <An src={['6-computer.svg']} pos={props.position} start={3150} end={3200} 
                 startSize={30} startOpacity={1} startX={55} startY={40} 
                 endSize={100} endX={0} endY={10} />
-                <An src={['6-computer.svg']} pos={props.position} start={3200} end={3800} 
+                <An src={['6-computer.svg']} pos={props.position} start={3200} end={4000} 
                 startSize={100} startOpacity={1} startX={0} startY={10} 
                 />
                 <An src={['6-cmd.svg']} pos={props.position} start={3230} end={3280} 
                 startSize={53} startOpacity={0} startX={40} startY={15} 
                 endOpacity={1} />
-                <An src={['6-cmd.svg']} pos={props.position} start={3280} end={3800} 
+                <An src={['6-cmd.svg']} pos={props.position} start={3280} end={4000} 
                 startSize={53} startOpacity={1} startX={40} startY={15} 
                 />
                 <An src={['text-12.svg']} pos={props.position} start={3280} end={3330} 
-                startSize={33.21} startOpacity={0} startX={46} startY={20}
+                startSize={26.57} startOpacity={0} startX={46} startY={20}
                 endOpacity={1} />
-                <An src={['text-12.svg']} pos={props.position} start={3330} end={3800} 
-                startSize={33.21} startOpacity={1} startX={46} startY={20} 
+                <An src={['text-12.svg']} pos={props.position} start={3330} end={4000} 
+                startSize={26.57} startOpacity={1} startX={46} startY={20} 
                 />
                 <An src={['text-14.svg']} pos={props.position} start={3410} end={3460} 
-                startSize={44.95} startOpacity={0} startX={45} startY={23}
+                startSize={35.96} startOpacity={0} startX={45} startY={23}
                 endOpacity={1} />
-                <An src={['text-14.svg']} pos={props.position} start={3460} end={3800} 
-                startSize={44.95} startOpacity={1} startX={45} startY={23} 
+                <An src={['text-14.svg']} pos={props.position} start={3460} end={4000} 
+                startSize={35.96} startOpacity={1} startX={45} startY={23} 
                 />
                 <An src={['text-13.svg']} pos={props.position} start={3540} end={3590} 
-                startSize={37.18} startOpacity={0} startX={43.5} startY={30} 
+                startSize={29.74} startOpacity={0} startX={44} startY={29} 
                 endOpacity={1} />
-                <An src={['text-13.svg']} pos={props.position} start={3590} end={3800} 
-                startSize={37.18} startOpacity={1} startX={43.5} startY={30} 
+                <An src={['text-13.svg']} pos={props.position} start={3590} end={4000} 
+                startSize={29.74} startOpacity={1} startX={44} startY={29} 
                 />
                 <An src={['text-15.svg']} pos={props.position} start={3670} end={3720} 
-                startSize={42.78} startOpacity={0} startX={43.5} startY={37} 
+                startSize={34.22} startOpacity={0} startX={47} startY={39}  
                 endOpacity={1} />
-                <An src={['text-15.svg']} pos={props.position} start={3720} end={3800} 
-                startSize={42.78} startOpacity={1} startX={43.5} startY={37} 
+                <An src={['text-15.svg']} pos={props.position} start={3720} end={4000} 
+                startSize={34.22} startOpacity={1} startX={47} startY={39} 
                 />
                 <TransitionContext.Consumer>
                     {({toggleEndAnimation}) => (
                         <Link to="/navigation/" onClick={toggleEndAnimation}>
-                            <An src={['6-enter.svg']} pos={props.position} start={3670} end={3800} 
+                            <An src={['6-enter.svg']} pos={props.position} start={3670} end={4000} 
                             startSize={13} startOpacity={1} startX={69} startY={67}
                             />
                         </Link>

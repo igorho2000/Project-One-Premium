@@ -8,7 +8,7 @@ export const BlogList = [
         title: "The Ultimate Guide to Curating an Exhibition",
         type: "TEAMS",
         date: "July 11th 2022",
-        banner: "0-banner.jpg",
+        banner: "0-banner.JPG",
         content: [
             "p","I don’t recall when it started, but to my knowledge, I’ve always had an obsession with museums and exhibitions. Whenever I visit someplace new, my first instinct has always been to visit the most acclaimed museum in the area and I have rarely been disappointed. One of my favorite museums is the Nazi Documentation Center in Nuremberg, Germany. The storyline was compelling, the visitation route was well-designed, and the message conveyed was extremely powerful. It was a surreal experience.", 
             "p","In my senior year in college, I joined TEDxNationalTaiwanUniversity as the Director of Planning. I wasn’t that into TED talks but one of the key responsibilities of the job caught my eye. The Director of Planning was in charge of curating the annual exhibition. As a museum geek, I just couldn’t pass up the opportunity to curate my own exhibition. So, here’s the story of how my team and I curated the best exhibition in organization history.",

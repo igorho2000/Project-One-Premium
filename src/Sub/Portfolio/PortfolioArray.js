@@ -63,5 +63,23 @@ export const PortList = [
             ["1-2.png", "Created custom icons to differentiate seperate functions; added styling to indicate which functions are active."],
             ["1-3.png", "Formatted Popups to display information concisely and designed the Roadruler.tw logo"],
         ]
+    },
+    {
+        title: "One Premium Site Redesign",
+        date: "August 2022",
+        button: [
+            {
+                type:"a",
+                text:"Github Repository",
+                link:"https://github.com/igorho2000/Project-One-Premium"
+            }
+        ],
+        banner: "2-banner.png",
+        description: 'To better showcase my designer and front-end developer skills, I decided to completely redesign my personal blog website into something special and distinctively "me". The One Premium site features custom-drawn graphics, a hard-coded scroll animation, and responsive design (obviously!). This website is the perfect representation of who I am: thoughtful, creative, and with a little genius splashed in.',
+        img: [
+            ["2-1.png", "Custom designed navigation page that features interactive elements and an easter egg."],
+            ["2-2.png", "Beautifully formatted blog page that was coded with reusability in mind."],
+            ["2-3.png", "Responsive design to ensure device compatibility."],
+        ]
     }
 ]

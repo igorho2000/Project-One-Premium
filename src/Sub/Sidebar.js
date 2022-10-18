@@ -30,6 +30,16 @@ export default function Sidebar(props) {
                 </a>
             </div>
             <div className='si-cont'>
+                <h3 className='si-title'>Hire Me On Fiverr</h3>
+                <a className='si-contact' href='https://www.fiverr.com/igorho423' target='_blank'>
+                    <img src={`${props.path}sidebar/icon-fiverr.svg`} className='si-contact__logo' style={{width: '24px'}} />
+                    <p className='si-contact__text'>https://www.fiverr.com/igorho423</p>
+                </a>
+                <a className='si-contact' href="https://www.fiverr.com/share/qQxAKX">
+                    <p className='si-contact__text' style={{margin: '0', fontStyle: 'italic', color: 'gray'}} >I will recreate an existing website and customize it</p>
+                </a>
+            </div>
+            <div className='si-cont'>
                 <h3 className='si-title'>Download My Resume</h3>
                 <a onMouseEnter={changeEng} onMouseLeave={changeEng} className='si-download'>
                     <img src={`${props.path}sidebar/icon-download-${eng ? "white" : "black"}.svg`} className='si-download__logo'/>

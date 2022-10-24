@@ -81,5 +81,28 @@ export const PortList = [
             ["2-2.png", "Beautifully formatted blog page that was coded with reusability in mind."],
             ["2-3.png", "Responsive design to ensure device compatibility."],
         ]
+    },
+    {
+        title: "Dorothy Chao Personal Website Design",
+        date: "October 2022",
+        button: [
+            {
+                type:"a",
+                text:"Live Website",
+                link:"https://doro-chau.github.io/"
+            },
+            {
+                type:"a",
+                text:"Github Repository",
+                link:"https://github.com/Doro-Chau/Doro-Chau.github.io"
+            }
+        ],
+        banner: "3-banner.png",
+        description: 'In Mid-October, I created a Fiverr account to provide website designing services. As part of my service, my clients would send me a link to a website they find beautiful and impressive. I would then follow the general design of the reference website and create a customized website for my client. To test out the concept and gain more attraction to my gig, my girlfriend Dorothy kindly agreed to become my first customer. She asked me to create a portfolio site for her using jacekjeznach.com as a reference. Here is how this project turned out.',
+        img: [
+            ["3-1.gif", "Recreated playful bouncing effect on individual characters; Added a windmill animation on hover or 'D'; Included dangling balls effect on mouse move."],
+            ["3-2.gif", "Created moving globe of keywords using Tagcloud.js"],
+            ["3-3.png", "Responsive design to ensure device compatibility."],
+        ]
     }
 ]

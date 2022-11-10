@@ -16,7 +16,10 @@ function Portfolio() {
             <div className='po-buttoncont'>
               <TransitionContext.Consumer>
                 {({toggleTransition}) => (
-                  <Link to={`port${index}`} className='po-button' onClick={toggleTransition}>Visit Gallery</Link>
+                  <Link to={`port${index}`} className='po-button' onClick={() => {
+                    toggleTransition();
+                    
+                  }}>Visit Gallery</Link>
                 )}
               </TransitionContext.Consumer>
             </div>

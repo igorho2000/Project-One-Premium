@@ -74,6 +74,12 @@ a:link, a:visited {
     text-align: justify;
     font-size: 1.1rem;
 }
+.ge-certlink {
+    margin-left: 5px;
+    font-size: 0.9rem;
+    color:rgb(191, 125, 19);
+    font-weight: 700;
+}
 
 /* Home */
 .ho-canvas {
@@ -207,6 +213,26 @@ a:link, a:visited {
     top: 33%;
     width: 8.48%;
 }
+.na-illustration__cert {
+    top: 14%;
+    left: 75%;
+    width: 16.5%
+}
+.na-illustration__pm {
+    left: 21%;
+    top: 38%;
+    width: 12%;
+}
+.na-illustration__date {
+    position: absolute;
+    left: 82.5%;
+    top: 39.5%;
+    transform: skewY(30deg);
+    font-size: 90%;
+    font-weight: 700;
+    font-family: 'Josefin Sans', sans-serif;
+    user-select: none;
+}
 /* Blog */
 .bl-listcont {
     display: grid;
@@ -313,6 +339,9 @@ a:link, a:visited {
     align-items: center;
     transition: box-shadow, background-color 0.2s;
     margin-bottom: 1rem;
+}
+.po-infocont:first-child {
+    background-color: rgb(255, 238, 142);
 }
 .po-infocont:hover {
     box-shadow: 3px 3px rgb(67, 67, 67);

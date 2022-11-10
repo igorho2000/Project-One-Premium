@@ -14,6 +14,7 @@ import {BlogList} from './Sub/Blog/PostsArray';
 import Posts from './Sub/Blog/Posts';
 import {PortList} from './Sub/Portfolio/PortfolioArray';
 import PortPost from './Sub/Portfolio/Portpost';
+import Certificate from './Sub/Certificate';
 
 
 function App() {
@@ -42,7 +43,10 @@ function App() {
         ...state,
         inProgress: state.inProgress === true ? false : true,
       }))
+      
     }, 2100)
+    document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
   }
   function doToggleEndAnimation() {
     setTransition(state => ({
@@ -72,6 +76,7 @@ function App() {
             <Route path="/about" element={<About/>} />
             <Route path="/portfolio" element={<Portfolio/>} />
             <Route path="/blog" element={<Blog/>} />
+            <Route path="/certificate" element={<Certificate/>} />
             
             {Blogpaths}
             {Portpaths}

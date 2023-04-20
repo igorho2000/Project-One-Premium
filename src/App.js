@@ -1,92 +1,77 @@
-import './App.css';
-import React from "react";
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
-import { TransitionContext } from './context';
+// CSS Imports
+import "./static/css/App.css";
+import "./static/css/Animation.css";
+import "./static/css/Sidebar.css";
+import "./static/css/Transition.css";
 
-import Home from './Sub/Home';
-import Navigation from './Sub/Navigation';
-import About from './Sub/About';
-import Portfolio from './Sub/Portfolio';
-import Blog from './Sub/Blog';
-import Transition from './Sub/Transition';
-import { EndAnimation } from './Sub/Transition';
-import {BlogList} from './Sub/Blog/PostsArray';
-import Posts from './Sub/Blog/Posts';
-import {PortList} from './Sub/Portfolio/PortfolioArray';
-import PortPost from './Sub/Portfolio/Portpost';
-import Certificate from './Sub/Certificate';
+// Library Imports
+import { Routes, Route } from "react-router-dom";
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import { useSelector } from "react-redux";
+import { selectAnimation } from "./store/utilSlice";
 
+// Component Imports
+import Home from "./pages/Home";
+import Navigation from "./pages/Navigation";
+import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
+import Blog from "./pages/Blog";
+import Transition from "./components/Transition";
+import AnimationEndScreen from "./components/AnimationEndScreen";
+import Posts from "./pages/Posts";
+import PortPost from "./pages/Portpost";
+import Certificate from "./pages/Certificate";
+
+// Data Imports
+import { PortList } from "./static/portfolio/portfolioPosts";
+import { BlogList } from "./static/blog/blogPosts";
+import lang from "./static/lang/lang.json";
+
+i18n.use(initReactI18next).init({
+  resources: lang,
+  lng: "en",
+  fallbackLng: "en",
+
+  interpolation: {
+    escapeValue: false,
+  },
+});
 
 function App() {
+  const animation = useSelector(selectAnimation);
+
   const Blogpaths = BlogList.map((item, index) => (
-    <Route path={`/blog/${item.type}${index}`} element={<Posts info={item}/>} />
-  ))
+    <Route
+      path={`/blog/${item.type}${index}`}
+      element={<Posts info={item} />}
+    />
+  ));
 
   const Portpaths = PortList.map((item, index) => (
-    <Route path={`/portfolio/port${index}`} element={<PortPost info={item}/>} />
-  ))
-
-  const [transition, setTransition] = React.useState({
-    inProgress: false,
-    endAnimation: false,
-    toggleEndAnimation: doToggleEndAnimation,
-    toggleTransition: doToggleTransition
-  })
-
-  function doToggleTransition() {
-    setTransition(state => ({
-      ...state,
-      inProgress: state.inProgress === true ? false : true,
-    }))
-    setTimeout(function(){
-      setTransition(state => ({
-        ...state,
-        inProgress: state.inProgress === true ? false : true,
-      }))
-      
-    }, 2100)
-    document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-  }
-  function doToggleEndAnimation() {
-    setTransition(state => ({
-      ...state,
-      endAnimation: state.endAnimation === true ? false : true,
-    }))
-    setTimeout(function(){
-      setTransition(state => ({
-        ...state,
-        endAnimation: state.endAnimation === true ? false : true,
-      }))
-    }, 3500)
-  }
+    <Route
+      path={`/portfolio/port${index}`}
+      element={<PortPost info={item} />}
+    />
+  ));
 
   return (
-    <TransitionContext.Provider value={transition}>
-      
+    <>
+      <div className="App"></div>
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/navigation" element={<Navigation />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/certificate" element={<Certificate />} />
+        {Blogpaths}
+        {Portpaths}
       </Routes>
-      
-        <header className="App-header">
-          <div className='App'></div>
-          <Routes>
-            
-            <Route path="/navigation" element={<Navigation/>} />
-            <Route path="/about" element={<About/>} />
-            <Route path="/portfolio" element={<Portfolio/>} />
-            <Route path="/blog" element={<Blog/>} />
-            <Route path="/certificate" element={<Certificate/>} />
-            
-            {Blogpaths}
-            {Portpaths}
-          </Routes>
-        </header>
-      
-      <Transition inProgress={transition.inProgress} />
-      <EndAnimation inProgress={transition.endAnimation} />
-    </TransitionContext.Provider>
-    
+
+      <Transition inProgress={animation.inProgress} />
+      <AnimationEndScreen inProgress={animation.endAnimation} />
+    </>
   );
 }
 

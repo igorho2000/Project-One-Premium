@@ -3,6 +3,7 @@ import InternalLink from "../components/InternalLink";
 import Sidebar from "../components/Sidebar";
 import { BlogList } from "../static/blog/blogPosts";
 import MainTitle from "../components/MainTitle";
+import BackTo from "../components/BackTo";
 
 function Blog() {
   const { t } = useTranslation();
@@ -24,13 +25,7 @@ function Blog() {
   return (
     <div className="ge-infocont">
       <div className="ge-header">
-        <InternalLink to="/navigation/" className="ge-return">
-          <img src="../icons/icon-back.svg" alt="back" />
-          <h2 className="ge-return__text">
-            {t("back.to")}
-            {t("back.nav")}
-          </h2>
-        </InternalLink>
+        <BackTo to="/navigation/" where="back.nav"></BackTo>
         <MainTitle title={t("blog.T")} titleEn="BLOG" />
       </div>
       <div className="bl-listcont">{BlogInfo}</div>

@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useTranslation } from "react-i18next";
 
 const initialState = {
   animation: {
@@ -30,6 +29,12 @@ export const utilSlice = createSlice({
     defineLanguage: (state, action) => {
       action.payload === "en" ? (state.langEn = true) : (state.langEn = false);
     },
+    toggleDarkmode: (state) => {
+      state.darkmode = state.darkmode ? false : true;
+    },
+    defineDarkmode: (state, action) => {
+      state.darkmode = action.payload;
+    },
   },
 });
 
@@ -38,6 +43,8 @@ export const {
   toggleEndAnimation,
   toggleLanguage,
   defineLanguage,
+  toggleDarkmode,
+  defineDarkmode,
 } = utilSlice.actions;
 
 export const selectAnimation = (state) => state.util.animation;

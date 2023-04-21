@@ -1,9 +1,12 @@
 import { useTranslation } from "react-i18next";
-import InternalLink from "../components/InternalLink";
 import Sidebar from "../components/Sidebar";
+import BackTo from "../components/BackTo";
+import { useSelector } from "react-redux";
+import { selectDarkmode } from "../store/utilSlice";
 
 export default function PortPost(props) {
   const { t } = useTranslation();
+  const darkmode = useSelector(selectDarkmode);
   const gallery = props.info.img.map((item) => (
     <div>
       <img
@@ -39,15 +42,8 @@ export default function PortPost(props) {
   return (
     <div className="ge-infocont">
       <div className="ge-header">
-        <InternalLink to="/portfolio" className="ge-return">
-          <img src="../icons/icon-back.svg" alt="back" />
-          <h2 className="ge-return__text">
-            {t("back.to")}
-            {t("portfolio.t")}
-          </h2>
-        </InternalLink>
-
-        <div>
+        <BackTo to="/portfolio" where="portfolio.t" />
+        <div className={darkmode && "d-text"}>
           <h1 className="ge-header__title bl-posttitle">{props.info.title}</h1>
           <h4
             className="bl-infocard__tag"
@@ -58,7 +54,7 @@ export default function PortPost(props) {
           <p>{props.info.date}</p>
         </div>
       </div>
-      <div bl-content>
+      <div bl-content className={darkmode && "d-text"}>
         <div className="po-post__buttoncont">{buttons}</div>
         <br />
         <h3 class="bl-sectiontitle">{t("portfolio.description")}</h3>
@@ -70,13 +66,7 @@ export default function PortPost(props) {
         <br />
         {gallery}
 
-        <InternalLink to="/portfolio" className="ge-return">
-          <img src="../icons/icon-back.svg" alt="back" />
-          <h2 className="ge-return__text">
-            {t("back.to")}
-            {t("portfolio.t")}
-          </h2>
-        </InternalLink>
+        <BackTo to="/portfolio" where="portfolio.t" />
       </div>
       <Sidebar path="../" />
     </div>

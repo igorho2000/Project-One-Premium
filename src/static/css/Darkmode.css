@@ -1,0 +1,29 @@
+.d-text {
+  color: white !important;
+}
+.d-text a {
+  color: white;
+}
+.d-background {
+  background-image: none;
+  background-color: rgb(6, 6, 40);
+}
+.d-transition {
+  background-color: rgb(55, 34, 0);
+}
+.d-border {
+  border-color: white;
+}
+.d-control {
+  color: white;
+}
+.d-control span {
+  color: white;
+}
+.d-control:hover {
+  background-color: white;
+  color: black !important;
+}
+.d-control:hover span {
+  color: black;
+}

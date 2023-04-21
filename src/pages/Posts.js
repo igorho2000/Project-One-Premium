@@ -1,9 +1,12 @@
 import { useTranslation } from "react-i18next";
-import InternalLink from "../components/InternalLink";
 import Sidebar from "../components/Sidebar";
+import BackTo from "../components/BackTo";
+import { useSelector } from "react-redux";
+import { selectDarkmode } from "../store/utilSlice";
 
 export default function Posts(props) {
   const { t } = useTranslation();
+  const darkmode = useSelector(selectDarkmode);
   function BlogContent(array) {
     var blog = [];
     for (let i = 0; i < array.length; i++) {
@@ -104,15 +107,8 @@ export default function Posts(props) {
   return (
     <div className="ge-infocont">
       <div className="ge-header">
-        <InternalLink to="/blog" className="ge-return">
-          <img src="../icons/icon-back.svg" alt="back" />
-          <h2 className="ge-return__text">
-            {t("back.to")}
-            {t("blog.t")}
-          </h2>
-        </InternalLink>
-
-        <div>
+        <BackTo to="/blog" where="blog.t" />
+        <div className={darkmode && "d-text"}>
           <h1 className="ge-header__title bl-posttitle">{props.info.title}</h1>
           <h4
             className="bl-infocard__tag"
@@ -123,7 +119,7 @@ export default function Posts(props) {
           <p>{props.info.date}</p>
         </div>
       </div>
-      <div bl-content>
+      <div bl-content className={darkmode && "d-text"}>
         <img
           className="bl-blogimage"
           src={`../../blog/${props.info.banner}`}
@@ -140,13 +136,7 @@ export default function Posts(props) {
         <br />
         <br />
 
-        <InternalLink to="/blog" className="ge-return">
-          <img src="../icons/icon-back.svg" alt="back" />
-          <h2 className="ge-return__text">
-            {t("back.to")}
-            {t("blog.t")}
-          </h2>
-        </InternalLink>
+        <BackTo to="/blog" where="blog.t" />
       </div>
       <Sidebar path="../" />
     </div>

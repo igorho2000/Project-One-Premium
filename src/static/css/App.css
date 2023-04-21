@@ -17,6 +17,7 @@
 }
 ::-webkit-scrollbar-thumb {
   background-color: rgb(94, 94, 94);
+  border-radius: 4rem;
 }
 ::-webkit-scrollbar-track {
   background-color: rgb(175, 175, 175);
@@ -62,6 +63,7 @@ a:visited {
   flex-direction: row;
   align-items: center;
   margin-bottom: 1rem;
+  color: black;
 }
 .ge-return__text {
   font-size: 1rem;
@@ -91,29 +93,39 @@ a:visited {
   color: rgb(191, 125, 19);
   font-weight: 700;
 }
+.ge-control {
+  position: absolute;
+  z-index: 100;
+  right: 1rem;
+  top: 1rem;
+  display: flex;
+}
 .ge-lang {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   border: solid black 2px;
   width: fit-content;
   padding: 2px 8px;
   border-radius: 1.2rem;
   margin-bottom: 8px;
   transition: background-color 0.2s;
-  position: absolute;
-  z-index: 100;
   background-color: transparent;
   font-size: 1.2rem;
-  right: 1rem;
-  top: 1rem;
+  color: black;
+  margin-left: 8px;
 }
 .ge-lang span {
   margin-right: 4px;
   font-size: 1.2rem;
+  color: black;
 }
 .ge-lang:hover {
   background-color: black;
+  color: white;
+}
+.ge-lang:hover span {
   color: white;
 }
 

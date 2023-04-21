@@ -3,6 +3,7 @@ import "./static/css/App.css";
 import "./static/css/Animation.css";
 import "./static/css/Sidebar.css";
 import "./static/css/Transition.css";
+import "./static/css/Darkmode.css";
 
 // Library Imports
 import { Routes, Route } from "react-router-dom";
@@ -10,9 +11,12 @@ import i18n from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  defineDarkmode,
   defineLanguage,
   selectAnimation,
+  selectDarkmode,
   selectLangEn,
+  toggleDarkmode,
   toggleLanguage,
 } from "./store/utilSlice";
 
@@ -48,15 +52,24 @@ function App() {
   const { i18n } = useTranslation();
   const dispatch = useDispatch();
   const langEn = useSelector(selectLangEn);
+  const darkmode = useSelector(selectDarkmode);
   const animation = useSelector(selectAnimation);
 
   useEffect(() => {
     const lang = localStorage.getItem("lang");
+    const darkmode = localStorage.getItem("darkmode");
     if (lang === undefined) {
       localStorage.setItem("lang", "en");
     } else {
       dispatch(defineLanguage(lang));
       i18n.changeLanguage(lang);
+    }
+    if (darkmode === undefined) {
+      localStorage.setItem("darkmode", "light");
+    } else if (darkmode === "dark") {
+      dispatch(defineDarkmode(true));
+    } else {
+      dispatch(defineDarkmode(false));
     }
   }, []);
 
@@ -76,11 +89,24 @@ function App() {
 
   return (
     <>
-      <div className="App"></div>
-      <div>
+      <div className={`App ${darkmode && "d-background"}`}></div>
+      <div className="ge-control">
+        <button
+          className={`ge-lang ${darkmode && "d-border d-control"}`}
+          onClick={() => {
+            darkmode
+              ? localStorage.setItem("darkmode", "light")
+              : localStorage.setItem("darkmode", "dark");
+            dispatch(toggleDarkmode());
+          }}
+        >
+          <span class="material-icons-round">
+            {darkmode ? "light_mode" : "dark_mode"}
+          </span>
+        </button>
         {langEn && (
           <button
-            className="ge-lang"
+            className={`ge-lang ${darkmode && "d-border d-control"}`}
             onClick={() => {
               i18n.changeLanguage("ch");
               dispatch(toggleLanguage());
@@ -93,7 +119,7 @@ function App() {
         )}
         {langEn === false && (
           <button
-            className="ge-lang"
+            className={`ge-lang ${darkmode && "d-border d-control"}`}
             onClick={() => {
               i18n.changeLanguage("en");
               dispatch(toggleLanguage());

@@ -3,6 +3,7 @@ import InternalLink from "../components/InternalLink";
 import Sidebar from "../components/Sidebar";
 import { PortList } from "../static/portfolio/portfolioPosts";
 import MainTitle from "../components/MainTitle";
+import BackTo from "../components/BackTo";
 
 function Portfolio() {
   const { t } = useTranslation();
@@ -27,13 +28,7 @@ function Portfolio() {
   return (
     <div className="ge-infocont">
       <div className="ge-header">
-        <InternalLink to="/navigation/" className="ge-return">
-          <img src="../icons/icon-back.svg" alt="back" />
-          <h2 className="ge-return__text">
-            {t("back.to")}
-            {t("back.nav")}
-          </h2>
-        </InternalLink>
+        <BackTo to="/navigation/" where="back.nav"></BackTo>
         <MainTitle title={t("portfolio.T")} titleEn="PORTFOLIO" />
       </div>
       <div>{PortInfo}</div>

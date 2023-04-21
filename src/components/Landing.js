@@ -1,9 +1,12 @@
 import { useTranslation } from "react-i18next";
 import InternalLink from "./InternalLink";
+import { useSelector } from "react-redux";
+import { selectDarkmode } from "../store/utilSlice";
 
 export default function Landing(props) {
   const { t } = useTranslation();
   const landingOpacity = 1 - (1 / 50) * props.position;
+  const darkmode = useSelector(selectDarkmode);
 
   return (
     <header style={{ opacity: landingOpacity > 0 ? landingOpacity : 0 }}>
@@ -20,11 +23,18 @@ export default function Landing(props) {
           <h3 className="ho-description__job">{t("home.job")}</h3>
           <h3 className="ho-description__job">{t("home.pm")}</h3>
         </div>
-        <img className="ho-logo" src="logo-main.svg" alt="main logo" />
+        <img
+          className="ho-logo"
+          src={`logo-main${darkmode ? "-dark" : ""}.svg`}
+          alt="main logo"
+        />
       </div>
       <div className="ho-nav">
-        <h2>{t("home.scroll")}</h2>
-        <InternalLink to="/navigation/" className="ho-tonavigation">
+        <h2 className={`${darkmode && "d-text"}`}>{t("home.scroll")}</h2>
+        <InternalLink
+          to="/navigation/"
+          className={`ho-tonavigation ${darkmode && "d-text"}`}
+        >
           {t("home.nav")}
         </InternalLink>
       </div>

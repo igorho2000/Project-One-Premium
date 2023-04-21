@@ -1,24 +1,21 @@
 import { useTranslation } from "react-i18next";
-import InternalLink from "../components/InternalLink";
 import Sidebar from "../components/Sidebar";
 import MainTitle from "../components/MainTitle";
+import { useSelector } from "react-redux";
+import { selectDarkmode } from "../store/utilSlice";
+import BackTo from "../components/BackTo";
 
 function About() {
   const { t } = useTranslation();
+  const darkmode = useSelector(selectDarkmode);
 
   return (
     <div className="ge-infocont">
       <div className="ge-header">
-        <InternalLink to="/navigation/" className="ge-return">
-          <img src="../icons/icon-back.svg" alt="back" />
-          <h2 className="ge-return__text">
-            {t("back.to")}
-            {t("back.nav")}
-          </h2>
-        </InternalLink>
+        <BackTo to="/navigation/" where="back.nav"></BackTo>
         <MainTitle title={t("about.T")} titleEn="ABOUT" />
       </div>
-      <p className="ge-text">
+      <p className={`ge-text ${darkmode && "d-text"}`}>
         {t("about.p1")}
         <br />
         <br />

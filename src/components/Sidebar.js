@@ -1,27 +1,28 @@
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useSelector } from "react-redux";
+import { selectDarkmode } from "../store/utilSlice";
 
 export default function Sidebar(props) {
   const { t } = useTranslation();
-  const [eng, setEng] = useState(false);
-  function changeEng() {
-    setEng((state) => (state ? false : true));
-  }
-
+  const darkmode = useSelector(selectDarkmode);
   const d = new Date();
   const year = d.getYear() + 1900;
 
   return (
-    <div>
+    <div className={darkmode ? "d-text" : ""}>
       <div className="si-cont">
         <h3 className="si-title">{t("sidebar.contact-me")}</h3>
         <a className="si-contact" href="mailto: igorho2000@gmail.com">
           <img
-            src={`${props.path}sidebar/icon-email.svg`}
+            src={`${props.path}sidebar/icon-email${
+              darkmode ? "-dark" : ""
+            }.svg`}
             className="si-contact__logo"
             alt="email"
           />
-          <p className="si-contact__text">igorho2000@gmail.com</p>
+          <p className={`si-contact__text ${darkmode && "d-text"}`}>
+            igorho2000@gmail.com
+          </p>
         </a>
         <a
           className="si-contact"
@@ -30,11 +31,15 @@ export default function Sidebar(props) {
           rel="noreferrer"
         >
           <img
-            src={`${props.path}sidebar/icon-github.svg`}
+            src={`${props.path}sidebar/icon-github${
+              darkmode ? "-dark" : ""
+            }.svg`}
             className="si-contact__logo"
             alt="github"
           />
-          <p className="si-contact__text">github.com/igorho2000</p>
+          <p className={`si-contact__text ${darkmode && "d-text"}`}>
+            github.com/igorho2000
+          </p>
         </a>
         <a
           className="si-contact"
@@ -43,11 +48,15 @@ export default function Sidebar(props) {
           rel="noreferrer"
         >
           <img
-            src={`${props.path}sidebar/icon-linkedin.svg`}
+            src={`${props.path}sidebar/icon-linkedin${
+              darkmode ? "-dark" : ""
+            }.svg`}
             className="si-contact__logo"
             alt="linkedin"
           />
-          <p className="si-contact__text">linkedin.com/in/igorho</p>
+          <p className={`si-contact__text ${darkmode && "d-text"}`}>
+            linkedin.com/in/igorho
+          </p>
         </a>
       </div>
       <div className="si-cont">
@@ -64,7 +73,9 @@ export default function Sidebar(props) {
             style={{ width: "24px" }}
             alt="fiverr"
           />
-          <p className="si-contact__text">https://www.fiverr.com/igorho423</p>
+          <p className={`si-contact__text ${darkmode && "d-text"}`}>
+            https://www.fiverr.com/igorho423
+          </p>
         </a>
         <a className="si-contact" href="https://www.fiverr.com/share/qQxAKX">
           <p
@@ -78,29 +89,18 @@ export default function Sidebar(props) {
       <div className="si-cont">
         <h3 className="si-title">{t("sidebar.download")}</h3>
         <a
-          onMouseEnter={changeEng}
-          onMouseLeave={changeEng}
-          className="si-download"
+          className={`ge-lang ${darkmode && "d-control d-border"}`}
+          style={{ fontSize: "1rem" }}
           href={`${props.path}sidebar/Igor_Resume_Eng.pdf`}
           download
         >
-          <span
-            className="material-icons-round"
-            style={{ color: eng ? "white" : "black" }}
-          >
-            file_download
-          </span>
-          <p
-            className="si-download__text"
-            style={{ color: eng ? "white" : "black" }}
-          >
-            {t("sidebar.download-button")}
-          </p>
+          <span className="material-icons-round">file_download</span>
+          <p>{t("sidebar.download-button")}</p>
         </a>
       </div>
       <div>
         <img
-          src={`${props.path}logo-main.svg`}
+          src={`${props.path}logo-main${darkmode ? "-dark" : ""}.svg`}
           className="si-logo"
           alt="one premium logo"
         />

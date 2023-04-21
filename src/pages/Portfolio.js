@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
 import InternalLink from "../components/InternalLink";
 import Sidebar from "../components/Sidebar";
 import { PortList } from "../static/portfolio/portfolioPosts";
+import MainTitle from "../components/MainTitle";
 
 function Portfolio() {
+  const { t } = useTranslation();
   const PortInfo = PortList.map((item, index) => (
     <div className="po-infocont" key={`Port${index}`}>
       <h3 className="po-infocont__title">{item.title}</h3>
@@ -15,7 +18,7 @@ function Portfolio() {
       </div>
       <div className="po-buttoncont">
         <InternalLink to={`port${index}`} className="po-button">
-          Visit Gallery
+          {t("portfolio.to-gallery")}
         </InternalLink>
       </div>
     </div>
@@ -26,9 +29,12 @@ function Portfolio() {
       <div className="ge-header">
         <InternalLink to="/navigation/" className="ge-return">
           <img src="../icons/icon-back.svg" alt="back" />
-          <h2 className="ge-return__text">Back to Navigation</h2>
+          <h2 className="ge-return__text">
+            {t("back.to")}
+            {t("back.nav")}
+          </h2>
         </InternalLink>
-        <h1 className="ge-header__title">PORTFOLIO</h1>
+        <MainTitle title={t("portfolio.T")} titleEn="PORTFOLIO" />
       </div>
       <div>{PortInfo}</div>
       <Sidebar />

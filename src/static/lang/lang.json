@@ -1,12 +1,128 @@
 {
   "en": {
     "translation": {
-      "contact-me": "Contact Me"
+      "home": {
+        "hi": "Hi.",
+        "its": "It's",
+        "job": "A Web Developer / Designer",
+        "pm": "who enjoys Project Management",
+        "scroll": "Scroll Slowly to View My Story",
+        "nav": "Or Go Straight to Portfolio"
+      },
+      "sidebar": {
+        "contact-me": "Contact Me",
+        "hire": "Hire Me On Fiverr",
+        "hire-description": "I will recreate an existing website and customize it",
+        "download": "Download My Resume",
+        "download-button": "2023 Ver."
+      },
+      "back": {
+        "to": "Back To ",
+        "nav": "Navigation"
+      },
+      "about": {
+        "T": "ABOUT",
+        "p1": "The Mandarin equivalent of “one” is pronounced as “yi-ke” which coincidentally sounds like my English name. I always strive to be a better version of myself, hence One Premium.",
+        "p2": "Hi, I’m Igor. I enjoy creating things that are distinctively “me” and work with teams that are inclusive, supporting, and collaborative. That is what drew me to front-end development and project management in the first place.",
+        "p3": " Leisure wise, I am a darts fanatic with a slight YouTube addiction. I enjoy the company of my family, girlfriend, and dog.",
+        "p4": "I am organized, efficient, and work well with others. I look forward to offering you my service!"
+      },
+      "cert": {
+        "T": "CERTIFICATIONS",
+        "t": "Certificate",
+        "description": "Some of the most important and relevant certificates I've earned during and after college are listed below.",
+        "academic": "Academic",
+        "dean1": "Dean's List Award - Semester 109-1 (2020-2021)",
+        "dean2": "Dean's List Award - Semester 110-2 (2022)",
+        "pm": "Project Management",
+        "pm-google": "Google Project Management Specialization (2022)",
+        "ux": "UI/UX Design",
+        "ux-google": "Google UX Design Specialization (2022)",
+        "data": "Data Analysis",
+        "data-google": "Google Data Analysis Specialization (2022)",
+        "front": "Front-end Development",
+        "front-tree1": "Treehouse Front-end Development Track (2022)",
+        "front-tree2": "Treehouse Web Design Track (2022)",
+        "front-scrimba": "Srimba Advanced React Course (2022)"
+      },
+      "portfolio": {
+        "T": "PORTFOLIO",
+        "t": "Portfolio",
+        "to-gallery": "Visit Gallery",
+        "description": "PROJECT DESCRIPTION",
+        "gallery": "GALLERY"
+      },
+      "blog": {
+        "T": "BLOG",
+        "t": "Blog",
+        "teams": "TEAMS",
+        "skills": "SKILLS",
+        "travel": "TRAVEL",
+        "read": "Read More"
+      }
     }
   },
   "ch": {
     "translation": {
-      "contact-me": "聯絡我"
+      "home": {
+        "hi": "嗨",
+        "its": "我是",
+        "job": "一位喜愛專案管理的",
+        "pm": "網路工程師 / 設計師",
+        "scroll": "往下滑動來了解我的故事",
+        "nav": "或點擊這裡以直接進到作品集"
+      },
+      "sidebar": {
+        "contact-me": "聯絡我",
+        "hire": "在Fiverr上雇用我",
+        "hire-description": "我會以一個既由網站為參考，為您客製專屬網站",
+        "download": "下載我的履歷",
+        "download-button": "2023年版本"
+      },
+      "back": {
+        "to": "回到",
+        "nav": "小房間"
+      },
+      "about": {
+        "T": "關於我",
+        "p1": "One 的中文為「一個」，快速的念聽起來十分像我的英文名字Igor。我總是希望能追求卓越，展現價值，因此我將個人網站命名為One Premium。",
+        "p2": "嗨，我是Igor。我喜歡創造具有我個人風采的作品，也享受與樂於討論、創新的團隊合作。因為如此，我選擇朝前端工程與專案管理的領域發展。",
+        "p3": "休閒娛樂方面，我喜愛飛鏢運動，也有些微的YouTube成癮。沒事時我都與家人、女友、狗狗鬼混。",
+        "p4": "我是個認真、有效率、有能力的人，十分期待未來有機會與您合作！"
+      },
+      "cert": {
+        "T": "證照榮譽",
+        "t": "證書",
+        "description": "以下列出我大學以來獲得最重要的幾張證書與證照。",
+        "academic": "學術",
+        "dean1": "書卷獎 - 109-1學期 (2020-2021)",
+        "dean2": "書卷獎 - 110-2學期 (2022)",
+        "pm": "專案管理",
+        "pm-google": "Google 專案管理證照 (2022)",
+        "ux": "UI/UX 設計",
+        "ux-google": "Google UX 設計證照 (2022)",
+        "data": "資料分析",
+        "data-google": "Google 資料分析證照 (2022)",
+        "front": "前端開發",
+        "front-tree1": "Treehouse 前端開發 (2022)",
+        "front-tree2": "Treehouse 網頁設計 (2022)",
+        "front-scrimba": "Srimba 進階 React 課程 (2022)"
+      },
+      "portfolio": {
+        "T": "作品集",
+        "t": "作品集",
+        "to-gallery": "了解更多",
+        "description": "專案簡介",
+        "gallery": "圖片集"
+      },
+      "blog": {
+        "T": "部落格",
+        "t": "部落格",
+        "teams": "團隊",
+        "skills": "技能",
+        "travel": "旅遊",
+        "read": "閱讀更多"
+      }
     }
   }
 }

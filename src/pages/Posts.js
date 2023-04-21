@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import InternalLink from "../components/InternalLink";
 import Sidebar from "../components/Sidebar";
 
 export default function Posts(props) {
+  const { t } = useTranslation();
   function BlogContent(array) {
     var blog = [];
     for (let i = 0; i < array.length; i++) {
@@ -104,7 +106,10 @@ export default function Posts(props) {
       <div className="ge-header">
         <InternalLink to="/blog" className="ge-return">
           <img src="../icons/icon-back.svg" alt="back" />
-          <h2 className="ge-return__text">Back to Blog</h2>
+          <h2 className="ge-return__text">
+            {t("back.to")}
+            {t("blog.t")}
+          </h2>
         </InternalLink>
 
         <div>
@@ -113,7 +118,7 @@ export default function Posts(props) {
             className="bl-infocard__tag"
             style={{ width: "fit-content", marginBottom: "0.2rem" }}
           >
-            {props.info.type}
+            {t(`blog.${props.info.type}`)}
           </h4>
           <p>{props.info.date}</p>
         </div>
@@ -137,7 +142,10 @@ export default function Posts(props) {
 
         <InternalLink to="/blog" className="ge-return">
           <img src="../icons/icon-back.svg" alt="back" />
-          <h2 className="ge-return__text">Back to Blog</h2>
+          <h2 className="ge-return__text">
+            {t("back.to")}
+            {t("blog.t")}
+          </h2>
         </InternalLink>
       </div>
       <Sidebar path="../" />

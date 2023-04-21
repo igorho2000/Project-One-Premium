@@ -1,19 +1,22 @@
+import { useTranslation } from "react-i18next";
 import InternalLink from "../components/InternalLink";
 import Sidebar from "../components/Sidebar";
 import { BlogList } from "../static/blog/blogPosts";
+import MainTitle from "../components/MainTitle";
 
 function Blog() {
+  const { t } = useTranslation();
   const BlogInfo = BlogList.map((item, index) => (
     <div className="bl-infocard" key={`blog${index}`}>
       <h3 className="bl-infocard__title">{item.title}</h3>
-      <h4 className="bl-infocard__tag">{item.type}</h4>
+      <h4 className="bl-infocard__tag">{t(`blog.${item.type}`)}</h4>
       <img
         className="bl-infocard__banner"
         src={`../blog/${item.banner}`}
         alt={item.title}
       />
       <InternalLink to={`${item.type}${index}`} className="bl-infocard__button">
-        Read More
+        {t("blog.read")}
       </InternalLink>
     </div>
   ));
@@ -23,9 +26,12 @@ function Blog() {
       <div className="ge-header">
         <InternalLink to="/navigation/" className="ge-return">
           <img src="../icons/icon-back.svg" alt="back" />
-          <h2 className="ge-return__text">Back to Navigation</h2>
+          <h2 className="ge-return__text">
+            {t("back.to")}
+            {t("back.nav")}
+          </h2>
         </InternalLink>
-        <h1 className="ge-header__title">BLOG</h1>
+        <MainTitle title={t("blog.T")} titleEn="BLOG" />
       </div>
       <div className="bl-listcont">{BlogInfo}</div>
       <Sidebar />

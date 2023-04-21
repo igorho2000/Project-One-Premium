@@ -7,9 +7,14 @@ import "./static/css/Transition.css";
 // Library Imports
 import { Routes, Route } from "react-router-dom";
 import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import { useSelector } from "react-redux";
-import { selectAnimation } from "./store/utilSlice";
+import { initReactI18next, useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  defineLanguage,
+  selectAnimation,
+  selectLangEn,
+  toggleLanguage,
+} from "./store/utilSlice";
 
 // Component Imports
 import Home from "./pages/Home";
@@ -27,6 +32,7 @@ import Certificate from "./pages/Certificate";
 import { PortList } from "./static/portfolio/portfolioPosts";
 import { BlogList } from "./static/blog/blogPosts";
 import lang from "./static/lang/lang.json";
+import { useEffect } from "react";
 
 i18n.use(initReactI18next).init({
   resources: lang,
@@ -39,7 +45,20 @@ i18n.use(initReactI18next).init({
 });
 
 function App() {
+  const { i18n } = useTranslation();
+  const dispatch = useDispatch();
+  const langEn = useSelector(selectLangEn);
   const animation = useSelector(selectAnimation);
+
+  useEffect(() => {
+    const lang = localStorage.getItem("lang");
+    if (lang === undefined) {
+      localStorage.setItem("lang", "en");
+    } else {
+      dispatch(defineLanguage(lang));
+      i18n.changeLanguage(lang);
+    }
+  }, []);
 
   const Blogpaths = BlogList.map((item, index) => (
     <Route
@@ -58,6 +77,34 @@ function App() {
   return (
     <>
       <div className="App"></div>
+      <div>
+        {langEn && (
+          <button
+            className="ge-lang"
+            onClick={() => {
+              i18n.changeLanguage("ch");
+              dispatch(toggleLanguage());
+              localStorage.setItem("lang", "ch");
+            }}
+          >
+            <span class="material-icons-round">translate</span>
+            中文
+          </button>
+        )}
+        {langEn === false && (
+          <button
+            className="ge-lang"
+            onClick={() => {
+              i18n.changeLanguage("en");
+              dispatch(toggleLanguage());
+              localStorage.setItem("lang", "en");
+            }}
+          >
+            <span class="material-icons-round">translate</span>
+            English
+          </button>
+        )}
+      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/navigation" element={<Navigation />} />

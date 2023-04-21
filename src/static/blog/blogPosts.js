@@ -4,7 +4,7 @@
 export const BlogList = [
   {
     title: "The Ultimate Guide to Curating an Exhibition",
-    type: "TEAMS",
+    type: "teams",
     date: "July 11th 2022",
     banner: "0-banner.JPG",
     content: [
@@ -110,7 +110,7 @@ export const BlogList = [
   },
   {
     title: "Directing and Editing without Experience",
-    type: "SKILLS",
+    type: "skills",
     date: "July 13th 2022",
     banner: "1-banner.png",
     content: [
@@ -160,7 +160,7 @@ export const BlogList = [
   },
   {
     title: "The BackPacker Mindset",
-    type: "TRAVEL",
+    type: "travel",
     date: "July 17th 2022",
     banner: "2-banner.jpg",
     content: [

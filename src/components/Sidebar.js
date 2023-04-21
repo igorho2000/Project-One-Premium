@@ -7,10 +7,14 @@ export default function Sidebar(props) {
   function changeEng() {
     setEng((state) => (state ? false : true));
   }
+
+  const d = new Date();
+  const year = d.getYear() + 1900;
+
   return (
     <div>
       <div className="si-cont">
-        <h3 className="si-title">{t("contact-me")}</h3>
+        <h3 className="si-title">{t("sidebar.contact-me")}</h3>
         <a className="si-contact" href="mailto: igorho2000@gmail.com">
           <img
             src={`${props.path}sidebar/icon-email.svg`}
@@ -47,7 +51,7 @@ export default function Sidebar(props) {
         </a>
       </div>
       <div className="si-cont">
-        <h3 className="si-title">Hire Me On Fiverr</h3>
+        <h3 className="si-title">{t("sidebar.hire")}</h3>
         <a
           className="si-contact"
           href="https://www.fiverr.com/igorho423"
@@ -67,12 +71,12 @@ export default function Sidebar(props) {
             className="si-contact__text"
             style={{ margin: "0", fontStyle: "italic", color: "gray" }}
           >
-            I will recreate an existing website and customize it
+            {t("sidebar.hire-description")}
           </p>
         </a>
       </div>
       <div className="si-cont">
-        <h3 className="si-title">Download My Resume</h3>
+        <h3 className="si-title">{t("sidebar.download")}</h3>
         <a
           onMouseEnter={changeEng}
           onMouseLeave={changeEng}
@@ -80,18 +84,17 @@ export default function Sidebar(props) {
           href={`${props.path}sidebar/Igor_Resume_Eng.pdf`}
           download
         >
-          <img
-            src={`${props.path}sidebar/icon-download-${
-              eng ? "white" : "black"
-            }.svg`}
-            className="si-download__logo"
-            alt="download resume"
-          />
+          <span
+            className="material-icons-round"
+            style={{ color: eng ? "white" : "black" }}
+          >
+            file_download
+          </span>
           <p
             className="si-download__text"
             style={{ color: eng ? "white" : "black" }}
           >
-            Eng. Version
+            {t("sidebar.download-button")}
           </p>
         </a>
       </div>
@@ -101,7 +104,7 @@ export default function Sidebar(props) {
           className="si-logo"
           alt="one premium logo"
         />
-        <p className="si-copyright">© 2022 Project One Premium</p>
+        <p className="si-copyright">© {year} Project One Premium</p>
       </div>
     </div>
   );

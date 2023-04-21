@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import InternalLink from "../components/InternalLink";
 import Sidebar from "../components/Sidebar";
 
 export default function PortPost(props) {
+  const { t } = useTranslation();
   const gallery = props.info.img.map((item) => (
     <div>
       <img
@@ -39,7 +41,10 @@ export default function PortPost(props) {
       <div className="ge-header">
         <InternalLink to="/portfolio" className="ge-return">
           <img src="../icons/icon-back.svg" alt="back" />
-          <h2 className="ge-return__text">Back to Portfolio</h2>
+          <h2 className="ge-return__text">
+            {t("back.to")}
+            {t("portfolio.t")}
+          </h2>
         </InternalLink>
 
         <div>
@@ -56,18 +61,21 @@ export default function PortPost(props) {
       <div bl-content>
         <div className="po-post__buttoncont">{buttons}</div>
         <br />
-        <h3 class="bl-sectiontitle">PROJECT DESCRIPTION</h3>
+        <h3 class="bl-sectiontitle">{t("portfolio.description")}</h3>
         <br />
         <p>{props.info.description}</p>
         <br />
         <br />
-        <h3 class="bl-sectiontitle">GALLERY</h3>
+        <h3 class="bl-sectiontitle">{t("portfolio.gallery")}</h3>
         <br />
         {gallery}
 
         <InternalLink to="/portfolio" className="ge-return">
           <img src="../icons/icon-back.svg" alt="back" />
-          <h2 className="ge-return__text">Back to Portfolio</h2>
+          <h2 className="ge-return__text">
+            {t("back.to")}
+            {t("portfolio.t")}
+          </h2>
         </InternalLink>
       </div>
       <Sidebar path="../" />

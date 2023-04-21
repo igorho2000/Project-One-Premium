@@ -1,9 +1,13 @@
+import { useSelector } from "react-redux";
 import InternalLink from "../components/InternalLink";
+import { selectLangEn } from "../store/utilSlice";
 
 function Navigation() {
   const d = new Date();
   const month = d.getMonth() + 1;
   const day = d.getDate();
+
+  const langEn = useSelector(selectLangEn);
 
   return (
     <div className="na-cont">
@@ -17,35 +21,35 @@ function Navigation() {
         <div>
           <InternalLink to="/about">
             <img
-              src="nav-about.svg"
+              src={`nav-about${langEn ? "" : "-ch"}.svg`}
               className="na-illustration--absolute na-illustration__about"
               alt="about"
             />
           </InternalLink>
           <InternalLink to="/portfolio">
             <img
-              src="nav-portfolio.svg"
+              src={`nav-portfolio${langEn ? "" : "-ch"}.svg`}
               className="na-illustration--absolute na-illustration__portfolio"
               alt="portfolio"
             />
           </InternalLink>
           <InternalLink to="/blog">
             <img
-              src="nav-blog.svg"
+              src={`nav-blog${langEn ? "" : "-ch"}.svg`}
               className="na-illustration--absolute na-illustration__blog"
               alt="blog"
             />
           </InternalLink>
           <InternalLink to="/certificate">
             <img
-              src="nav-cert.svg"
+              src={`nav-cert${langEn ? "" : "-ch"}.svg`}
               className="na-illustration--absolute na-illustration__cert"
               alt="certificates"
             />
           </InternalLink>
           <InternalLink to="/">
             <img
-              src="nav-home.svg"
+              src={`nav-home${langEn ? "" : "-ch"}.svg`}
               className="na-illustration--absolute na-illustration__home"
               alt="back to animation"
             />

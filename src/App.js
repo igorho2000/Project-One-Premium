@@ -18,6 +18,8 @@ import {
   selectLangEn,
   toggleDarkmode,
   toggleLanguage,
+  selectLoad,
+  finishLoad,
 } from "./store/utilSlice";
 
 // Component Imports
@@ -31,6 +33,7 @@ import AnimationEndScreen from "./components/AnimationEndScreen";
 import Posts from "./pages/Posts";
 import PortPost from "./pages/Portpost";
 import Certificate from "./pages/Certificate";
+import Load from "./components/Load";
 
 // Data Imports
 import { PortList } from "./static/portfolio/portfolioPosts";
@@ -54,6 +57,7 @@ function App() {
   const langEn = useSelector(selectLangEn);
   const darkmode = useSelector(selectDarkmode);
   const animation = useSelector(selectAnimation);
+  const load = useSelector(selectLoad);
 
   useEffect(() => {
     const lang = localStorage.getItem("lang");
@@ -71,6 +75,9 @@ function App() {
     } else {
       dispatch(defineDarkmode(false));
     }
+    setTimeout(() => {
+      dispatch(finishLoad());
+    }, 1000);
   }, []);
 
   const Blogpaths = BlogList.map((item, index) => (
@@ -132,16 +139,20 @@ function App() {
         )}
       </div>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/navigation" element={<Navigation />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/certificate" element={<Certificate />} />
-        {Blogpaths}
-        {Portpaths}
+        {!load && (
+          <>
+            <Route path="/" element={!animation.inProgress && <Home />} />
+            <Route path="/navigation" element={<Navigation />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/certificate" element={<Certificate />} />
+            {Blogpaths}
+            {Portpaths}
+          </>
+        )}
       </Routes>
-
+      <Load inProgress={load} />
       <Transition inProgress={animation.inProgress} />
       <AnimationEndScreen inProgress={animation.endAnimation} />
     </>

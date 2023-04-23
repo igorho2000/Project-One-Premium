@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+  load: true,
   animation: {
     inProgress: false,
     endAnimation: false,
@@ -35,6 +36,9 @@ export const utilSlice = createSlice({
     defineDarkmode: (state, action) => {
       state.darkmode = action.payload;
     },
+    finishLoad: (state) => {
+      state.load = false;
+    },
   },
 });
 
@@ -45,8 +49,10 @@ export const {
   defineLanguage,
   toggleDarkmode,
   defineDarkmode,
+  finishLoad,
 } = utilSlice.actions;
 
+export const selectLoad = (state) => state.util.load;
 export const selectAnimation = (state) => state.util.animation;
 export const selectDarkmode = (state) => state.util.darkmode;
 export const selectLangEn = (state) => state.util.langEn;

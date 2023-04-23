@@ -37,6 +37,14 @@
     opacity: 0;
   }
 }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 .tr-background {
   width: 100vw;
@@ -47,6 +55,7 @@
   animation-name: fade;
   animation-duration: 2s;
   animation-delay: 1.7s;
+  animation-fill-mode: forwards;
   z-index: 1000;
 }
 
@@ -82,6 +91,13 @@
   border-bottom: solid rgb(41, 41, 41) 0.5vw;
   animation-name: extend;
   animation-duration: 1.8s;
+}
+.load {
+  animation-delay: 0.8s;
+}
+.load-img {
+  width: 4rem;
+  animation: spin 0.3s linear 0s infinite;
 }
 
 @media (orientation: landscape) {
@@ -162,6 +178,7 @@
   top: 0;
   background-color: black;
   animation-name: end;
+  animation-fill-mode: forwards;
   animation-duration: 3s;
   opacity: 0;
 }
@@ -178,6 +195,7 @@
     rgb(91, 212, 255) 100%
   );
   animation-name: endfade;
+  animation-fill-mode: forwards;
   animation-duration: 1s;
   animation-delay: 3s;
 }

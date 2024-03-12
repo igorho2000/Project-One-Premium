@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="355.02167"
+   height="384.05246"
+   viewBox="0 0 93.932812 101.61388"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="Scene 3.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="0.50646226"
+     inkscape:cx="284.32523"
+     inkscape:cy="350.47034"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="axonomgrid"
+       id="grid1326"
+       snapvisiblegridlinesonly="false"
+       units="px"
+       spacingy="2.6458333"
+       originx="169.33333"
+       originy="95.25" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter50242"
+       x="-0.068740197"
+       y="-0.076156154"
+       width="1.1374804"
+       height="1.1523123">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.9975433"
+         id="feGaussianBlur50244" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-128.82108,-51.536495)">
+    <ellipse
+       style="mix-blend-mode:normal;fill:#ffe787;fill-opacity:0.471526;stroke-width:0.0850151;stroke-linecap:round;stroke-miterlimit:18.1;stroke-dashoffset:5.07364;stroke-opacity:0;paint-order:markers fill stroke;filter:url(#filter50242)"
+       id="ellipse51718"
+       cx="97.822716"
+       cy="190.93932"
+       rx="34.871181"
+       ry="31.475485"
+       transform="matrix(0.71326481,-0.56508991,0.51488184,0.78281792,7.702798,8.1513434)" />
+  </g>
+</svg>

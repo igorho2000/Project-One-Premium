@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="62.406326"
+   height="222.24664"
+   viewBox="0 0 16.511673 58.802758"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="Scene 3.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="0.50646226"
+     inkscape:cx="284.32523"
+     inkscape:cy="350.47034"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="axonomgrid"
+       id="grid1326"
+       snapvisiblegridlinesonly="false"
+       units="px"
+       spacingy="2.6458333"
+       originx="169.33333"
+       originy="95.25" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-167.44058,-79.679695)">
+    <g
+       id="g2992"
+       inkscape:label="Microphone stand">
+      <path
+         id="path2577"
+         style="fill:#808080;stroke:#99e4ff;stroke-width:0;stroke-linecap:round;stroke-miterlimit:18.1;stroke-dashoffset:5.07364;paint-order:markers fill stroke"
+         d="m 183.9407,133.62009 c 0,2.68541 -3.67729,4.86236 -8.21345,4.86236 -4.53616,0 -8.21345,-2.17695 -8.21345,-4.86236 0,-0.32863 -0.12963,-1.89639 -0.0246,-2.20673 0.75285,-2.22563 4.25706,-2.65563 8.2381,-2.65563 4.22474,0 7.75066,0.71083 8.20854,3.13953 0.0337,0.17903 0.005,1.53847 0.005,1.72283 z"
+         sodipodi:nodetypes="sssssss" />
+      <ellipse
+         style="fill:#5e5e5e;fill-opacity:1;stroke:#99e4ff;stroke-width:0;stroke-linecap:round;stroke-miterlimit:18.1;stroke-dashoffset:5.07364;paint-order:markers fill stroke"
+         id="path2577-4"
+         cx="175.65402"
+         cy="131.6795"
+         rx="8.2134495"
+         ry="4.8623624" />
+      <path
+         id="path2577-4-1-8"
+         style="fill:#483737;stroke:#99e4ff;stroke-width:0;stroke-linecap:round;stroke-miterlimit:18.1;stroke-dashoffset:5.07364;paint-order:markers fill stroke"
+         transform="scale(1,-1)"
+         d="m 176.69221,-131.1261 c 0,0.0909 -0.18035,42.220992 -0.22725,42.302422 -0.18232,0.3162 -0.70479,0.657869 -1.30065,0.657869 -0.6097,0 -1.12547,-0.23808 -1.29651,-0.56577 -0.0392,-0.075 0.11098,-42.311871 0.11098,-42.394521 0,-0.4436 0.60744,-0.8032 1.35676,-0.8032 0.74932,0 1.35676,0.3596 1.35676,0.8032 z"
+         sodipodi:nodetypes="ssssssss" />
+      <ellipse
+         style="fill:#7c7c7c;fill-opacity:1;stroke:#99e4ff;stroke-width:0;stroke-linecap:round;stroke-miterlimit:18.1;stroke-dashoffset:5.07364;paint-order:markers fill stroke"
+         id="path2577-4-1"
+         cx="175.16246"
+         cy="88.764885"
+         rx="1.3567568"
+         ry="0.80320013" />
+      <g
+         id="g2979"
+         inkscape:label="Microphone"
+         transform="matrix(0.75894537,-0.22985971,0.22985971,0.75894537,71.661971,-32.92712)">
+        <path
+           id="path2880"
+           style="fill:#4d4d4d;fill-opacity:1;stroke:#99e4ff;stroke-width:0;stroke-linecap:round;stroke-miterlimit:18.1;stroke-dashoffset:5.07364;paint-order:markers fill stroke"
+           d="m 82.620016,177.28359 4.250262,2.68928 -0.004,5.66339 -4.332183,-2.90742 z"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           id="path2882"
+           style="fill:#cccccc;fill-opacity:1;stroke:#99e4ff;stroke-width:0;stroke-linecap:round;stroke-miterlimit:18.1;stroke-dashoffset:5.07364;paint-order:markers fill stroke"
+           d="m 91.271353,177.33102 -4.398227,2.81082 -4.333884,-2.77819 4.315265,-2.68551 z"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           id="path2884"
+           style="fill:#999999;fill-opacity:1;stroke:#99e4ff;stroke-width:0;stroke-linecap:round;stroke-miterlimit:18.1;stroke-dashoffset:5.07364;paint-order:markers fill stroke"
+           d="m 86.885248,185.92816 5.02e-4,-5.86995 4.517725,-2.74145 -0.04371,5.56186 z"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           id="path2917"
+           style="fill:#cccccc;fill-opacity:1;stroke:#99e4ff;stroke-width:0;stroke-linecap:round;stroke-miterlimit:18.1;stroke-dashoffset:5.07364;paint-order:markers fill stroke"
+           d="m 86.270723,181.01689 -14.14123,7.84394 -1.424836,-0.88501 12.95006,-8.59595 z"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           id="path2944"
+           style="fill:#999999;fill-opacity:1;stroke:#99e4ff;stroke-width:0;stroke-linecap:round;stroke-miterlimit:18.1;stroke-dashoffset:5.07364;paint-order:markers fill stroke"
+           d="m 72.29383,190.5457 -0.04567,-1.76034 13.891325,-7.77457 -0.04371,3.02221 z"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           id="path2971"
+           style="fill:#4d4d4d;fill-opacity:1;stroke:#99e4ff;stroke-width:0;stroke-linecap:round;stroke-miterlimit:18.1;stroke-dashoffset:5.07364;paint-order:markers fill stroke"
+           d="m 70.70677,187.9501 1.618266,0.88844 -0.004,1.83083 -1.700187,-1.10658 z"
+           sodipodi:nodetypes="ccccc" />
+      </g>
+    </g>
+  </g>
+</svg>

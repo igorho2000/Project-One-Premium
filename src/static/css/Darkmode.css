@@ -1,29 +1,45 @@
+.d-button {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	padding: 4px 6px;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+.d-button:hover {
+	background-color: black;
+	color: white;
+}
+.d-button:hover span {
+	color: white;
+}
 .d-text {
-  color: white !important;
+	color: white !important;
 }
 .d-text a {
-  color: white;
+	color: white;
 }
 .d-background {
-  background-image: none;
-  background-color: rgb(6, 6, 40);
+	background-image: none;
+	background-color: rgb(6, 6, 40);
 }
 .d-transition {
-  background-color: rgb(55, 34, 0);
-}
-.d-border {
-  border-color: white;
+	background-color: rgb(55, 34, 0);
 }
 .d-control {
-  color: white;
+	color: white;
 }
 .d-control span {
-  color: white;
+	color: white;
 }
 .d-control:hover {
-  background-color: white;
-  color: black !important;
+	background-color: white;
+	color: black !important;
 }
 .d-control:hover span {
-  color: black;
+	color: black;
 }

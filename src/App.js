@@ -87,9 +87,9 @@ function App() {
 		/>
 	));
 
-	const Portpaths = PortList.map((item, index) => (
+	const Portpaths = PortList.map((item) => (
 		<Route
-			path={`/portfolio/port${index}`}
+			path={`/portfolio/${item.title.toLowerCase().replaceAll(" ", "-")}`}
 			element={<PortPost info={item} />}
 		/>
 	));

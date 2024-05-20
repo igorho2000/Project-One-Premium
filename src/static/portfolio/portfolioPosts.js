@@ -54,6 +54,43 @@ export const PortList = [
 		],
 	},
 	{
+		title: "Taipei City Dashboard Documentation",
+		date: "April, 2024",
+		button: [
+			{
+				type: "a",
+				text: "Live Site",
+				link: "https://tuic.gov.taipei/documentation",
+			},
+			{
+				type: "a",
+				text: "Github",
+				link: "https://github.com/tpe-doit/Taipei-City-Dashboard-Documentation",
+			},
+		],
+		banner: "doc-banner.png",
+		description:
+			"Taipei City Dashboard Documentation is the official documentation site for Taipei City Dashboard. The site provides users with comprehensive guides on how to use and develop the dashboard. I wrote and translated the entire front end and back end documentations as well as built the site itself.",
+		img: [
+			[
+				"doc-1.png",
+				"This documentation site provides comprehensive guides on how to use and develop the dashboard. Including the front end, back end, and data end.",
+			],
+			[
+				"doc-2.png",
+				"The pages are written in the md format and custom rendered by the site's front end.",
+			],
+			[
+				"doc-3.png",
+				"The component registry page provides a list of all the components available on the dashboard and its respective status.",
+			],
+			[
+				"doc-4.png",
+				"An API tester is also included in the documentation site to help users test the API endpoints.",
+			],
+		],
+	},
+	{
 		title: "ProntoMock",
 		date: "November, 2022",
 		button: [

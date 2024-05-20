@@ -49,6 +49,7 @@
 .tr-background {
 	width: 100vw;
 	height: 100vh;
+	height: calc(var(--vh) * 100);
 	position: fixed;
 	top: 0;
 	background-color: rgb(240, 206, 152);
@@ -62,6 +63,7 @@
 .tr-cont {
 	display: flex;
 	height: 100vh;
+	height: calc(var(--vh) * 100);
 	width: 100vw;
 	justify-content: center;
 	align-items: center;
@@ -173,6 +175,7 @@
 .end-background {
 	width: 100vw;
 	height: 100vh;
+	height: calc(var(--vh) * 100);
 	position: fixed;
 	z-index: 4;
 	top: 0;
@@ -185,6 +188,7 @@
 .end-back {
 	width: 100vw;
 	height: 100vh;
+	height: calc(var(--vh) * 100);
 	position: fixed;
 	z-index: 3;
 	top: 0;
@@ -207,6 +211,7 @@
 .end-thank {
 	margin-left: 20vw;
 	margin-top: 45vh;
+	margin-top: calc(var(--vh) * 45);
 	font-size: 1.4rem;
 	font-weight: bold;
 	color: white;

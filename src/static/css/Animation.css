@@ -1,32 +1,36 @@
 .an-cont {
-    display: flex;
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	height: calc(var(--vh) * 100);
+	justify-content: center;
+	align-items: center;
 }
 
 .an-main {
-    position: relative;
-    width: 69.25vh;
-    height: 95vh;
+	position: relative;
+	width: 69.25vh;
+	width: calc(var(--vh) * 69.25);
+	height: 95vh;
+	height: calc(var(--vh) * 95);
 }
 
 .an-main img {
-    max-height: 95vh;
-    position: absolute;
+	max-height: 95vh;
+	max-height: calc(var(--vh) * 95);
+	position: absolute;
 }
 
 @media (orientation: portrait) {
-    .an-main {
-        position: relative;
-        width: 90vw;
-        height: 123.58vw;
-    }
-    .an-main img {
-        max-height: none;
-        max-width: 90vw;
-    }
+	.an-main {
+		position: relative;
+		width: 90vw;
+		height: 123.58vw;
+	}
+	.an-main img {
+		max-height: none;
+		max-width: 90vw;
+	}
 }

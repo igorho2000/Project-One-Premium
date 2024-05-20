@@ -60,6 +60,14 @@ function App() {
 	const load = useSelector(selectLoad);
 
 	useEffect(() => {
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+		window.addEventListener("resize", () => {
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty("--vh", `${vh}px`);
+		});
+
 		const lang = localStorage.getItem("lang");
 		const darkmode = localStorage.getItem("darkmode");
 		if (lang === undefined) {
@@ -78,12 +86,13 @@ function App() {
 		setTimeout(() => {
 			dispatch(finishLoad());
 		}, 1000);
-	}, []);
+	}, [dispatch, i18n]);
 
 	const Blogpaths = BlogList.map((item, index) => (
 		<Route
 			path={`/blog/${item.type}${index}`}
 			element={<Posts info={item} />}
+			key={`blog-${item.type}${index}`}
 		/>
 	));
 
@@ -91,6 +100,7 @@ function App() {
 		<Route
 			path={`/portfolio/${item.title.toLowerCase().replaceAll(" ", "-")}`}
 			element={<PortPost info={item} />}
+			key={`port-${item.title.toLowerCase().replaceAll(" ", "-")}`}
 		/>
 	));
 
@@ -107,7 +117,7 @@ function App() {
 						dispatch(toggleDarkmode());
 					}}
 				>
-					<span class="material-icons-round">
+					<span className="material-icons-round">
 						{darkmode ? "light_mode" : "dark_mode"}
 					</span>
 				</button>
@@ -120,7 +130,7 @@ function App() {
 							localStorage.setItem("lang", "ch");
 						}}
 					>
-						<span class="material-icons-round">translate</span>
+						<span className="material-icons-round">translate</span>
 					</button>
 				)}
 				{langEn === false && (
@@ -132,7 +142,7 @@ function App() {
 							localStorage.setItem("lang", "en");
 						}}
 					>
-						<span class="material-icons-round">translate</span>
+						<span className="material-icons-round">translate</span>
 					</button>
 				)}
 			</div>

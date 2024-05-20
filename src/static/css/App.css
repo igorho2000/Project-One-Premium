@@ -1,6 +1,7 @@
 .App {
 	width: 100vw;
 	height: 100vh;
+	height: calc(var(--vh) * 100);
 	position: fixed;
 	top: 0;
 	z-index: -1;
@@ -133,10 +134,12 @@ a:visited {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
+	height: calc(var(--vh) * 100);
 	top: 0;
 }
 .ho-scroll {
 	height: calc(100vh + 3800px);
+	height: calc(var(--vh) * 100 + 3800px);
 }
 .ho-cont {
 	display: flex;
@@ -145,6 +148,7 @@ a:visited {
 	align-items: center;
 	width: 100vw;
 	margin-top: 25vh;
+	margin-top: calc(var(--vh) * 25);
 }
 .ho-description {
 	color: rgb(248, 248, 248);
@@ -244,6 +248,7 @@ a:visited {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	height: calc(var(--vh) * 100);
 	width: 100vw;
 }
 .na-illustration {
@@ -251,6 +256,7 @@ a:visited {
 }
 .na-illustration__main {
 	height: 95vh;
+	height: calc(var(--vh) * 95);
 }
 .na-illustration--absolute {
 	position: absolute;
@@ -490,10 +496,12 @@ a:visited {
 	.ho-cont {
 		flex-direction: column-reverse;
 		margin-top: 20vh;
+		margin-top: calc(var(--vh) * 20);
 	}
 	.ho-description {
 		margin-right: 0;
 		margin-top: 6vh;
+		margin-top: calc(var(--vh) * 6);
 	}
 	.ho-logo {
 		margin-left: 0;

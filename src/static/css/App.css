@@ -296,9 +296,20 @@ a:visited {
 	width: 16.5%;
 }
 .na-illustration__pm {
+	left: 35%;
+	top: 14%;
+	width: 9%;
+}
+.na-illustration__component {
 	left: 21%;
-	top: 38%;
-	width: 12%;
+	top: 42%;
+	transform-origin: left top;
+	transform: scale(var(--compratio)) skewY(-30deg);
+	cursor: pointer;
+	border-radius: 5px;
+}
+.na-illustration__component:hover {
+	transform: translate3d(1.5%, 1.5%, 0) scale(var(--compratio)) skewY(-30deg);
 }
 .na-illustration__date {
 	position: absolute;

@@ -91,6 +91,47 @@ export const PortList = [
 		],
 	},
 	{
+		title: "YouBike Project Site",
+		date: "September, 2023",
+		button: [
+			{
+				type: "a",
+				text: "Live Site",
+				link: "https://tuic.gov.taipei/youbike",
+			},
+			{
+				type: "a",
+				text: "Github",
+				link: "https://github.com/tpe-doit/Youbike-Project-Site-FE",
+			},
+		],
+		banner: "youbike-banner.png",
+		description:
+			"This website showcases the YouBike Dispatchment Optimization Project undertaken by Taipei Urban Intelligence Center. The narrative is split into three portions: management, weekday, and weekend. A interactive map is also featured on every page to create an immersive experience for the user.",
+		img: [
+			[
+				"youbike-1.png",
+				"The welcome page features a full screen video starring TUIC's system engineer.",
+			],
+			[
+				"youbike-2.png",
+				"Visitors are invited to choose one of three perspectives regarding the YouBike project: management, weekday, or weekend.",
+			],
+			[
+				"youbike-3.png",
+				"Alongside the narrative, an interactive map is featured on every page to create an immersive experience. Users even have the option to switch between layers on some pages.",
+			],
+			[
+				"youbike-4.png",
+				"YouBike ride behavior data is displayed as 3D arcs. The underlying technology was also integrated into Taipei City Dashboard.",
+			],
+			[
+				"youbike-5.png",
+				"On some pages, 3D models of real YouBike stations are also displayed on the map.",
+			],
+		],
+	},
+	{
 		title: "ProntoMock",
 		date: "November, 2022",
 		button: [
